@@ -15,9 +15,9 @@ sections:
       username: admin
       text: ""
       # Show a call-to-action button under your biography? (optional)
-      # button:
-      #   text: Download CV
-      #   url: uploads/resume.pdf
+      button:
+        text: Download CV
+        url: uploads/CV_JunsungPark.pdf
     design:
       css_class: dark
       background:
@@ -42,28 +42,6 @@ sections:
         Please reach out to collaborate 😃
     design:
       columns: '1'
-  - block: collection
-    id: papers
-    content:
-      title: Recent Publications
-      text: ""
-      filters:
-        folders:
-          - publication
-        exclude_featured: false
-    design:
-      view: citation
-  - block: resume-experience
-    id: experience
-    content:
-      title: Experience
-      text: ""
-      username: admin
-    design:
-      # Hugo date format
-      date_format: 'January 2006'
-      # Education or Experience section first?
-      is_education_first: false
   - block: collection
     id: news
     content:
@@ -93,6 +71,28 @@ sections:
       # Reduce spacing
       spacing:
         padding: [0, 0, 0, 0]
+  - block: collection
+    id: papers
+    content:
+      title: Recent Publications
+      text: ""
+      filters:
+        folders:
+          - publication
+        exclude_featured: false
+    design:
+      view: citation
+  - block: resume-experience
+    id: experience
+    content:
+      title: Experience
+      text: ""
+      username: admin
+    design:
+      # Hugo date format
+      date_format: 'January 2006'
+      # Education or Experience section first?
+      is_education_first: false
   - block: cta-card
     demo: true # Only display this section in the Hugo Blox Builder demo site
     content:
