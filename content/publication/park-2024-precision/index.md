@@ -7,6 +7,6 @@ authors:
 date: '2024-01-01'
 publishDate: '2024-07-07T00:36:01.825677Z'
 publication_types:
-- article-conference
+- conference
 publication: '*AAAI Workshop*'
 ---
