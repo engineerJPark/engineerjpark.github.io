@@ -17,7 +17,7 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
-        url: https://engineerjpark.github.io/uploads/CV_JunsungPark.pdf
+        url: https://github.com/engineerJPark/engineerjpark.github.io/blob/main/uploads/CV_JunsungPark.pdf
     design:
       css_class: dark
       background:
