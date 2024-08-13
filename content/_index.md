@@ -17,7 +17,7 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
-        url: uploads/CV_JunsungPark.pdf
+        url: https://engineerjpark.github.io/uploads/CV_JunsungPark.pdf
     design:
       css_class: dark
       background:
@@ -36,10 +36,7 @@ sections:
       subtitle: ''
       text: |-
         I'm a Ph.D. student in KAIST AI (Korea Advanced Institute of Science & Technology).
-
         I'm interested in Autonomous Driving task, especially in LiDAR Segmentation and Detection in adverse weather.
-        
-        Please reach out to collaborate 😃
     design:
       columns: '1'
   - block: collection
