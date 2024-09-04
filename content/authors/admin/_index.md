@@ -41,8 +41,8 @@ profiles:
     url: https://www.linkedin.com/in/junsung-park-20a136158/
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=WjKLCQ4AAAAJ&hl=en
-  - icon: "custom/tistory"
-    url: https://knowledgeforengineers.tistory.com/
+  # - icon: "custom/tistory"
+  #   url: https://knowledgeforengineers.tistory.com/
   # - icon: brands/instagram
   #   url: https://www.instagram.com/
   # - icon: academicons/orcid
