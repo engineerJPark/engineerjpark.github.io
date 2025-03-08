@@ -8,7 +8,7 @@ date: 2024-01-01
 venue: 'ECCV'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'https://arxiv.org/pdf/2407.02286'
-citation: '<span class=\"underline\">Junsung Park</span>, Kyungmin Kim, Hyunjung Shim.'
+citation: '<span class="underline">Junsung Park</span>, Kyungmin Kim, Hyunjung Shim.'
 
 ---
 
