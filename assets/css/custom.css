@@ -1,0 +1,5 @@
+.social-icons img.custom-icon {
+    width: 14px;        /* Font Awesome 아이콘과 비슷한 px 값 */
+    height: 14px;       /* 필요 시 조정 */
+    vertical-align: middle; /* 아이콘과 텍스트 수직 정렬 맞춤 */
+  }
