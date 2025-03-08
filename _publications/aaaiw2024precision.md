@@ -1,11 +1,11 @@
 ---
-title: "Paper Title Number 1"
+title: "Precision matters: Precision-aware ensemble for weakly supervised semantic segmentation"
 collection: publications
 category: manuscripts
 permalink: /publication/aaaiw2024precision
 excerpt: ''
-date: 2009-10-01
-venue: 'Journal 1'
+date: 2024
+venue: 'AAAI Workshop'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'https://arxiv.org/pdf/2406.19638'
 citation: 'Park, J., & Shim, H. (2024). Precision matters: Precision-aware ensemble for weakly supervised semantic segmentation. AAAI Workshop.'
