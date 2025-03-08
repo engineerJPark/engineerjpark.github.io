@@ -4,7 +4,7 @@ collection: patents
 category: domestic
 permalink: /patent/barbell2024
 excerpt: ''
-date: 2024-01-01
+date: 2023-01-01
 venue: 'Korea Patent'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 # paperurl: 'https://arxiv.org/pdf/2406.19638'
