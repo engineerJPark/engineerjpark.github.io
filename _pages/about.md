@@ -19,6 +19,10 @@ I'm interested in Autonomous Driving task, especially in LiDAR Segmentation and 
   {% include archive-single.html %}
 {% endfor %}
 
+## Patents
+{% for post in site.patents reversed %}
+  {% include archive-single-patent.html %}
+{% endfor %}
 
 ## Awards and Honors
 - Scholarship (2022-2023) from Lee Myungbak & Kim Yoonok Foundation.
