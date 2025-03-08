@@ -26,10 +26,10 @@ I'm interested in Autonomous Driving task, especially in LiDAR Segmentation and 
 <!-- ## Patents
 {% for post in site.patents reversed %}
   {% include archive-single.html %}
-{% endfor %}
+{% endfor %} -->
 
 
-## Projects
+<!-- ## Projects
 {% for post in site.projects reversed %}
   {% include archive-single.html %}
 {% endfor %} -->
