@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/aaaiw2024precision
 excerpt: ''
-date: 2024
+date: 2024-01-01
 venue: 'AAAI Workshop'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'https://arxiv.org/pdf/2406.19638'

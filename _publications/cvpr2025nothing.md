@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/cvpr2025nothing
 excerpt: ''
-date: 2025
+date: 2025-01-01
 venue: 'CVPR'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: ''
