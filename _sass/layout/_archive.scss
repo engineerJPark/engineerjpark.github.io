@@ -15,7 +15,7 @@
   }
 
   a {
-    text-decoration: underline;
+    text-decoration: none; // text-decoration: underline;
 
     &:hover {
       text-decoration: underline;
@@ -78,15 +78,15 @@
   margin-bottom: 0.25em;  /* 기본값보다 작게 조정 */
 }
 
-.archive__item:hover {
-  .archive__item-teaser {
-    box-shadow: 0 0 10px rgba(#000, 0.25);
-  }
+// .archive__item:hover {
+//   .archive__item-teaser {
+//     box-shadow: 0 0 10px rgba(#000, 0.25);
+//   }
 
-  .archive__item-title {
-    text-decoration: underline;
-  }
-}
+//   .archive__item-title {
+//     text-decoration: underline;
+//   }
+// }
 
 .underline {
   text-decoration: underline;
