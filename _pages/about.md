@@ -20,6 +20,11 @@ I'm interested in Autonomous Driving task, especially in LiDAR Segmentation and 
 {% endfor %}
 
 
+## Awards and Honors
+- Scholarship (2022-2023) from Lee Myungbak & Kim Yoonok Foundation.
+- Scholarship (2021-2023) from Korea University Alumni Association.
+- Bronze Prize & Social Contribution Prize (2018) from Korea Univ. Innovation Center for Engineering, Capstone Design Project
+
 ## Educations
 - PhD Candidate, **KAIST**
   - August 2023 – ing
