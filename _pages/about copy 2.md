@@ -20,6 +20,10 @@ I'm interested in Autonomous Driving task, especially in LiDAR Segmentation and 
 {% endfor %}
 
 
+<!-- ## Experiences -->
+<!-- - Internship in NVIDIA AI research (2026.01 ~ 2026.06) -->
+
+
 ## Educations
 - PhD Candidate, **KAIST**
   - August 2023 – ing
