@@ -5,7 +5,7 @@ category: manuscripts
 permalink: /publication/eccv2024rethinking
 excerpt: ''
 date: 2024-01-01
-venue: 'ECCV Oral'
+venue: 'ECCV <span style='color:red;'>Oral</span>'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'https://arxiv.org/pdf/2407.02286'
 citation: '<span class="underline">Junsung Park</span>, Kyungmin Kim, Hyunjung Shim.'
