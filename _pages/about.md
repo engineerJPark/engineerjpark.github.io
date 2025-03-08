@@ -21,7 +21,7 @@ I'm interested in Autonomous Driving task, especially in LiDAR Segmentation and 
 
 ## Patents
 {% for post in site.patents reversed %}
-  {% include archive-single-patent.html %}
+  {% include archive-single.html %}
 {% endfor %}
 
 ## Awards and Honors
