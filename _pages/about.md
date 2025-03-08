@@ -23,7 +23,7 @@ I'm interested in Autonomous Driving task, especially in LiDAR Segmentation and 
 <!-- ## Experiences -->
 <!-- Internship in NVIDIA AI research (2026.01 ~ 2026.06) -->
 
-## Patents
+<!-- ## Patents
 {% for post in site.patents reversed %}
   {% include archive-single.html %}
 {% endfor %}
@@ -32,7 +32,7 @@ I'm interested in Autonomous Driving task, especially in LiDAR Segmentation and 
 ## Projects
 {% for post in site.projects reversed %}
   {% include archive-single.html %}
-{% endfor %}
+{% endfor %} -->
 
 
 
