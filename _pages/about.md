@@ -8,17 +8,28 @@ redirect_from:
 ---
 
 ## About Me
-I'm a Ph.D. candidate in [KAIST AI](https://gsai.kaist.ac.kr/).
-I majored Mechanical Engineering & Artificial Intelligence for BSc in [Korea University](https://www.korea.edu/sites/en/index.do).
+I'm a Ph.D. candidate in [KAIST AI](https://gsai.kaist.ac.kr/), 
+and earned BSc for Mechanical Engineering & Artificial Intelligence in [Korea University](https://www.korea.edu/sites/en/index.do).
+
 I'm interested in Autonomous Driving task, especially in LiDAR Segmentation and Detection in adverse weather.
 
 
 ## Publications
-
-
+{% for post in site.publications reversed %} {% include archive-single.html %} {% endfor %}
 
 <!-- ## Experiences -->
 <!-- Internship in NVIDIA AI research (2026.01 ~ 2026.06) -->
+
+
+## Patents
+
+
+
+
+## Projects
+
+
+
 
 
 ## Educations
