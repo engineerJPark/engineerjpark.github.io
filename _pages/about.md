@@ -15,7 +15,10 @@ I'm interested in Autonomous Driving task, especially in LiDAR Segmentation and 
 
 
 ## Publications
-{% for post in site.publications reversed %} {% include archive-single.html %} {% endfor %}
+{% for post in site.publications reversed %}
+  {% include archive-single.html %}
+{% endfor %}
+
 
 <!-- ## Experiences -->
 <!-- Internship in NVIDIA AI research (2026.01 ~ 2026.06) -->
