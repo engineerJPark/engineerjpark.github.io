@@ -46,7 +46,9 @@
         <li><a href="{{ author.googlescholar }}"><i class="ai ai-google-scholar icon-pad-right"></i>Google Scholar</a></li>
       {% endif %}
       {% if author.blog %}
-        <li><a href="{{ author.blog }}"><i class="fab fa-fw fa-soundcloud icon-pad-right"></i>Personal Blog</a></li>
+        <!-- <li><a href="{{ author.blog }}"><i class="fab fa-fw fa-soundcloud icon-pad-right"></i>Personal Blog</a></li> -->
+        <img src="{{ base_path }}/images/tistory.svg" alt="My Blog Icon" style="width:1em;height:1em;" class="icon-pad-right">
+        Personal Blog
       {% endif %}
       {% if author.semantic %}
         <li><a href="{{ author.semantic }}"><i class="ai ai-semantic-scholar ai-fw icon-pad-right"></i>Semantic Scholar</a></li>
