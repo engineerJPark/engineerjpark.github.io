@@ -54,7 +54,7 @@
           <p><i><strong>{{ post.venue }}</strong></i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
         {% elsif post.collection == 'patents' %}
           <p><i><strong>{{ post.venue }}</strong></i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
-          {% elsif post.collection == 'projects' %}
+        {% elsif post.collection == 'projects' %}
           <p>{{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
         {% elsif post.date %}
          {{ post.date | default: "1900-01-01" | date: "%Y" }}</time></p>
