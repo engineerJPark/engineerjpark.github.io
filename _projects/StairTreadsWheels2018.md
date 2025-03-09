@@ -3,7 +3,7 @@ title: "Capstone Design Projects for 'Stair Treads Wheels'"
 collection: patents
 category: project
 permalink: /projects/StairTreadsWheels2018
-excerpt: 'Designed wheels for going upstairs. Developed wheel rotation control.'
+excerpt: 'Undergraduate project. Designed wheels for going upstairs. Developed wheel rotation control.'
 date: 2018-01-01
 # venue: 'Korea Patent'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
