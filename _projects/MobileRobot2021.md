@@ -3,7 +3,7 @@ title: "Mobile Robot Project : ROS programming & motor control"
 collection: patents
 category: project
 permalink: /patent/MobileRobot2021
-excerpt: ''
+excerpt: 'ROS1 programming and embedded motor control on OpenCM board.'
 date: 2021-01-01
 # venue: 'Korea Patent'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'

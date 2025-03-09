@@ -3,7 +3,7 @@ title: "Open Manipulator Grasping Task : Vision for Robot Arm Control"
 collection: patents
 category: project
 permalink: /patent/OpenManipulatorGraspingTask2022
-excerpt: ''
+excerpt: 'Developed vision modules for robot arm grasping task. Estimate 3D grasping position by FCN segmentation models and pinhole camera model.'
 date: 2022-01-01
 # venue: 'Korea Patent'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
