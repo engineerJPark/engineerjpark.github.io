@@ -39,4 +39,3 @@ I'm interested in Autonomous Driving task, especially in LiDAR Segmentation and 
   - August 2023 – ing
 - BSc Mechanical Engineering & Artificial Intelligence, **Korea University**
   - March 2017 – August 2023
-  - GPA: 3.96/4.5
