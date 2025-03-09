@@ -1,7 +1,7 @@
 ---
 title: "Capstone Design Projects for 'Stair Treads Wheels'"
 collection: patents
-category: domestic
+category: project
 permalink: /projects/StairTreadsWheels2018
 excerpt: ''
 date: 2018-01-01

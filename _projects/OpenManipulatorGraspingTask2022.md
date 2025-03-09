@@ -1,7 +1,7 @@
 ---
 title: "Open Manipulator Grasping Task : Vision for Robot Arm Control"
 collection: patents
-category: domestic
+category: project
 permalink: /patent/OpenManipulatorGraspingTask2022
 excerpt: ''
 date: 2022-01-01
