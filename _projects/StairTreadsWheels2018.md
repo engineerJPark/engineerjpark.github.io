@@ -3,9 +3,9 @@ title: "Capstone Design Projects for 'Stair Treads Wheels'"
 collection: patents
 category: project
 permalink: /projects/StairTreadsWheels2018
-excerpt: 'Undergraduate project. Designed wheels for going upstairs. Developed wheel rotation control.'
+excerpt: 'Designed wheels for going upstairs. Developed wheel rotation control.'
 date: 2018-01-01
-# venue: 'Korea Patent'
+venue: 'Undergraduate Project'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 # paperurl: 'https://github.com/engineerJPark/2018_Stair_Wheel_Project'
 # citation: 'Park, J., & Shim, H. (2024). Precision matters: Precision-aware ensemble for weakly supervised semantic segmentation. AAAI Workshop.'

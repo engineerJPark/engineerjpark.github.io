@@ -3,9 +3,9 @@ title: "Mobile Robot Project : ROS programming & motor control"
 collection: patents
 category: project
 permalink: /patent/MobileRobot2021
-excerpt: 'Undergraduate project. ROS1 programming and embedded motor control on OpenCM board.'
+excerpt: 'ROS1 programming and embedded motor control on OpenCM board.'
 date: 2021-01-01
-# venue: 'Korea Patent'
+venue: 'Undergraduate Project'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'https://github.com/kasimov-ku/2021-project-emb-motorcontrol'
 # citation: 'Park, J., & Shim, H. (2024). Precision matters: Precision-aware ensemble for weakly supervised semantic segmentation. AAAI Workshop.'
