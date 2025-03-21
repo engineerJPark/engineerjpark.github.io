@@ -7,7 +7,7 @@ excerpt: ''
 date: 2025-01-01
 venue: 'CVPR'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: ''
+paperurl: 'https://arxiv.org/pdf/2503.15910'
 citation: '<span class="underline">Junsung Park</span>, Hwijeong Lee, Inha Kang, Hyunjung Shim.'
 ---
 
