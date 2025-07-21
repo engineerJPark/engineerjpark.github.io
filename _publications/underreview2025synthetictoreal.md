@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/underreview2025synthetictoreal
 excerpt: ''
-date: 2024-01-01
+date: 2025-08-01
 venue: 'Ongoing Work'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: ''
