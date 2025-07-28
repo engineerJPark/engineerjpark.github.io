@@ -8,7 +8,7 @@ date: 2025-08-01
 venue: 'Ongoing Work...'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: ''
-citation: '<span class="underline">Junsung Park</span>, Hyunjung Shim.'
+citation: '<span class="underline">Junsung Park</span>, Hyunjung Shim'
 
 ---
 
