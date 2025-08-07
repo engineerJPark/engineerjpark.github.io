@@ -5,7 +5,7 @@ category: manuscripts
 permalink: /publication/underreview2025synthetictoreal
 excerpt: ''
 date: 2025-08-01
-venue: 'Ongoing Work...'
+venue: 'Under Review'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: ''
 citation: '<span class="underline">Junsung Park</span>, Hyunjung Shim'
