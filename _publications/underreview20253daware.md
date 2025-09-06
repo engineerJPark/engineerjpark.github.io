@@ -2,10 +2,10 @@
 title: "3D-Aware Vision-Language Models Fine-Tuning with Geometric Distillation"
 collection: publications
 category: manuscripts
-permalink: /publication/underreview20253daware
+permalink: /publication/emnlpfindings20253daware
 excerpt: ''
 date: 2025-05-01
-venue: 'Under Review'
+venue: 'EMNLP Findings'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: ''
 citation: 'Seonho Lee*, Jiho Choi*, Inha Kang, Jiwook Kim, <span class="underline">Junsung Park</span>, Hyunjung Shim.'
