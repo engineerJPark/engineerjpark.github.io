@@ -2,7 +2,7 @@
 title: "IROS 2025 RoboSense Challenge Track \#1: Driving with Language."
 collection: patents
 category: project
-permalink: /patent/IROS2025Driving_with_Language
+permalink: /patent/IROS2025DrivingwithLanguage
 excerpt: 'Developed a prompting method to enable the VLM model to better understand driving scenes. Achieved a final 5th-place record'
 date: 2025-10-01
 venue: 'IROS 2025 RoboSense Challenge'

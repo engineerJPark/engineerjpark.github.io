@@ -6,7 +6,7 @@ category: manuscripts
 permalink: /publication/iros2025drivingwithlanguage
 excerpt: ''
 date: 2025-10-01
-venue: 'IROS 2025 RoboSense Challenge, Technical Report'
+venue: 'IROS 2025 RoboSense Challenge Technical Report'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: ''
 citation: 'Seungjun Yu*, <span class="underline">Junsung Park</span>*, Youngsun Lim, Hyunjung Shim'
