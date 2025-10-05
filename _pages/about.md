@@ -8,10 +8,10 @@ redirect_from:
 ---
 
 ## About Me
-I'm a Ph.D. candidate in [KAIST AI](https://gsai.kaist.ac.kr/), 
+I'm a Ph.D. candidate in [KAIST AI](https://gsai.kaist.ac.kr/) adviced by Prof. [Hyunjung Shim](https://scholar.google.com/citations?user=KB5XZGIAAAAJ&hl=en), 
 and earned BSc for Mechanical Engineering & Artificial Intelligence in [Korea University](https://www.korea.edu/sites/en/index.do).
 
-I'm interested in Autonomous Driving task, especially in LiDAR Segmentation and Detection in adverse weather.
+I'm interested in real-world problems like autonomous driving, navigation, and robotics.
 
 
 ## Publications
