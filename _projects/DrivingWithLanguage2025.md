@@ -1,13 +1,13 @@
 ---
-title: "Mobile Robot Project : ROS programming & motor control"
+title: "IROS 2025 RoboSense Challenge Track \#1: Driving with Language"
 collection: patents
 category: project
-permalink: /projects/MobileRobot2021
-excerpt: 'ROS1 programming and embedded motor control on OpenCM board.'
-date: 2021-01-01
-venue: 'Undergraduate Project'
+permalink: /projects/DrivingWithLanguage2025
+excerpt: 'Developed a prompting method to enable the VLM model to better understand driving scenes. Achieved a final 5th-place record.'
+date: 2025-10-01
+venue: 'IROS 2025 RoboSense Challenge'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: 'https://github.com/kasimov-ku/2021-project-emb-motorcontrol'
+# paperurl: 'https://github.com/engineerJPark/2018_Stair_Wheel_Project'
 # citation: 'Park, J., & Shim, H. (2024). Precision matters: Precision-aware ensemble for weakly supervised semantic segmentation. AAAI Workshop.'
 ---
 
