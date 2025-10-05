@@ -1,5 +1,5 @@
 ---
-title: "IROS 2025 RoboSense Challenge Track \#1: Driving with Language"
+title: "IROS 2025 RoboSense Challenge Track #1: Driving with Language"
 collection: patents
 category: project
 permalink: /projects/DrivingWithLanguage2025
