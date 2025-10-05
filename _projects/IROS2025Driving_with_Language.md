@@ -2,9 +2,9 @@
 title: "IROS 2025 RoboSense Challenge Track \#1: Driving with Language."
 collection: patents
 category: project
-permalink: /patent/MobileRobot2021
+permalink: /patent/IROS2025Driving_with_Language
 excerpt: 'Developed a prompting method to enable the VLM model to better understand driving scenes. Achieved a final 5th-place record'
-date: 2021-01-01
+date: 2025-10-01
 venue: 'IROS 2025 RoboSense Challenge'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 # paperurl: 'https://github.com/kasimov-ku/2021-project-emb-motorcontrol'
