@@ -1,6 +1,5 @@
 ---
-# title: "Style and Intensity: Bridging the Synthetic-to-Real Gap in LiDAR Semantic Segmentation"
-title: "Rethinking Synthetic-to-Real Unsupervised Domain Adaptation in LiDAR Semantic Segmentation"
+title: "Scene, Class, Signal: Tri‑Level Adaptation for Synthetic‑to‑Real LiDAR Segmentation"
 collection: publications
 category: manuscripts
 permalink: /publication/underreview2025synthetictoreal

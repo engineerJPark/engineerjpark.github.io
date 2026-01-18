@@ -13,6 +13,10 @@ and earned BSc for Mechanical Engineering & Artificial Intelligence in [Korea Un
 
 I'm interested in real-world problems like autonomous driving, navigation, and robotics.
 
+## Ongoing Works
+{% for post in site.ongoing_works reversed %}
+  {% include archive-single.html %}
+{% endfor %}
 
 ## Publications
 {% for post in site.publications reversed %}
