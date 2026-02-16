@@ -7,7 +7,7 @@ excerpt: ''
 date: 2025-05-01
 venue: 'EMNLP Findings'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: ''
+paperurl: 'https://aclanthology.org/2025.findings-emnlp.562.pdf'
 citation: 'Seonho Lee*, Jiho Choi*, Inha Kang, Jiwook Kim, <span class="underline">Junsung Park</span>, Hyunjung Shim.'
 
 ---

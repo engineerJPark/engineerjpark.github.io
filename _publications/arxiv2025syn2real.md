@@ -8,7 +8,7 @@ excerpt: ''
 date: 2025-10-01
 venue: 'arxiv'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: ''
+paperurl: 'https://openreview.net/pdf?id=8xjCp4OA6k'
 citation: '<span class="underline">Junsung Park</span>, Hyunjung Shim'
 
 ---

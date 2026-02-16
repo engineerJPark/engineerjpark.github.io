@@ -8,7 +8,7 @@ excerpt: ''
 date: 2025-10-01
 venue: 'IROS 2025 RoboSense Challenge Technical Report'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: ''
+paperurl: 'https://arxiv.org/pdf/2510.19001'
 citation: 'Seungjun Yu*, <span class="underline">Junsung Park</span>*, Youngsun Lim, Hyunjung Shim'
 
 ---

@@ -8,7 +8,7 @@ excerpt: ''
 date: 2025-10-01
 venue: 'arxiv'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: ''
+paperurl: 'https://arxiv.org/pdf/2511.20022'
 citation: 'Seungjun Yu, Seonho Lee, Namho Kim, Jaeyo Shin, <span class="underline">Junsung Park</span>, Wonjeong Ryu, Raehyuk Jung, Hyunjung Shim'
 
 ---
