@@ -18,6 +18,13 @@ I'm interested in real-world problems like autonomous driving, navigation, and r
   {% include archive-single.html %}
 {% endfor %} -->
 
+## Educations
+- PhD Candidate, **KAIST**: August 2023 ~ ing
+- BSc Mechanical Engineering & Artificial Intelligence, **Korea University**: March 2017 ~ August 2023
+
+## Experiences
+- Research Intern, **Qualcomm AI Research, Qualcomm Korea YH**: May 2026 ~ Nov 2026
+
 ## Publications
 {% for post in site.publications reversed %}
   {% include archive-single.html %}
@@ -37,7 +44,3 @@ I'm interested in real-world problems like autonomous driving, navigation, and r
 - Scholarship from Lee Myungbak & Kim Yoonok Foundation: 2022 ~ 2023
 - Scholarship from Korea University Alumni Association: 2021 ~ 2023
 - Bronze Prize & Social Contribution Prize from Korea Univ. Innovation Center for Engineering, Capstone Design Project. 2018.
-
-## Educations
-- PhD Candidate, **KAIST**: August 2023 ~ ing
-- BSc Mechanical Engineering & Artificial Intelligence, **Korea University**: March 2017 ~ August 2023

@@ -20,9 +20,9 @@ main:
   # - title: "Blog Posts"
   #   url: /year-archive/
     
-  - title: "CV"
-    # url: /cv/
-    url: /files/Curriculum_Vitae.pdf
+  # - title: "CV"
+  #   # url: /cv/
+  #   url: /files/Curriculum_Vitae.pdf
     
   # - title: "Guide"
   #   url: /markdown/
