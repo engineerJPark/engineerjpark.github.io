@@ -22,8 +22,8 @@ I'm interested in real-world problems like autonomous driving, navigation, and r
 - PhD Candidate, **KAIST**: August 2023 ~ ing
 - BSc Mechanical Engineering & Artificial Intelligence, **Korea University**: March 2017 ~ August 2023
 
-<!-- ## Experiences
-- Research Intern, **Qualcomm AI Research, Qualcomm Korea YH**: May 2026 ~ Nov 2026 -->
+## Experiences
+- Research Intern, **Qualcomm AI Research, Qualcomm Korea YH**: May 2026 ~ Nov 2026
 
 ## Publications
 {% for post in site.publications reversed %}
