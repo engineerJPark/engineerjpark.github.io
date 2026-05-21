@@ -1,15 +1,15 @@
 ---
 # title: "Style and Intensity: Bridging the Synthetic-to-Real Gap in LiDAR Semantic Segmentation"
-title: "Scene, Class, Signal: Tri‑Level Adaptation for Synthetic‑to‑Real LiDAR Segmentation"
+title: "SUPER-AD: Semantic Uncertainty-aware Planning for End-to-End Robust Autonomous Driving"
 collection: publications
 category: manuscripts
-permalink: /publication/arxiv2025syn2real
+permalink: /publication/preprint2025superad
 excerpt: ''
 date: 2025-10-01
-venue: 'arxiv'
+venue: 'preprint'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: 'https://openreview.net/pdf?id=8xjCp4OA6k'
-citation: '<span class="underline">Junsung Park</span>, Hyunjung Shim'
+paperurl: 'https://arxiv.org/pdf/2511.22865'
+citation: 'Wonjeong Ryu, Seungjun Yu, Seokha Moon, Hojun Choi, <span class="underline">Junsung Park</span>, Jinkyu Kim, Hyunjung Shim'
 
 ---
 

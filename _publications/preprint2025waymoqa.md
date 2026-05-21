@@ -1,15 +1,15 @@
 ---
 # title: "Style and Intensity: Bridging the Synthetic-to-Real Gap in LiDAR Semantic Segmentation"
-title: "SUPER-AD: Semantic Uncertainty-aware Planning for End-to-End Robust Autonomous Driving"
+title: "WaymoQA: A Multi-View Visual Question Answering Dataset for Safety-Critical Reasoning in Autonomous Driving"
 collection: publications
 category: manuscripts
-permalink: /publication/arxiv2025superad
+permalink: /publication/preprint2025waymoqa
 excerpt: ''
 date: 2025-10-01
-venue: 'arxiv'
+venue: 'preprint'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: 'https://arxiv.org/pdf/2511.22865'
-citation: 'Wonjeong Ryu, Seungjun Yu, Seokha Moon, Hojun Choi, <span class="underline">Junsung Park</span>, Jinkyu Kim, Hyunjung Shim'
+paperurl: 'https://arxiv.org/pdf/2511.20022'
+citation: 'Seungjun Yu, Seonho Lee, Namho Kim, Jaeyo Shin, <span class="underline">Junsung Park</span>, Wonjeong Ryu, Raehyuk Jung, Hyunjung Shim'
 
 ---
 

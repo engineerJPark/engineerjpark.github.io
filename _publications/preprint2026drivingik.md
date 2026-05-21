@@ -1,15 +1,15 @@
 ---
 # title: "Style and Intensity: Bridging the Synthetic-to-Real Gap in LiDAR Semantic Segmentation"
-title: "WaymoQA: A Multi-View Visual Question Answering Dataset for Safety-Critical Reasoning in Autonomous Driving"
+title: "Grounding Driving VLA via Inverse Kinematics"
 collection: publications
 category: manuscripts
-permalink: /publication/arxiv2025waymoqa
+permalink: /publication/preprint2026drivingik
 excerpt: ''
-date: 2025-10-01
-venue: 'arxiv'
+date: 2026-05-01
+venue: 'preprint'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: 'https://arxiv.org/pdf/2511.20022'
-citation: 'Seungjun Yu, Seonho Lee, Namho Kim, Jaeyo Shin, <span class="underline">Junsung Park</span>, Wonjeong Ryu, Raehyuk Jung, Hyunjung Shim'
+paperurl: 'https://arxiv.org/pdf/2605.21061'
+citation: '<span class="underline">Junsung Park</span>, Hyunjung Shim'
 
 ---
 
