@@ -5,7 +5,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/neurips2026drivingik
 excerpt: ''
-date: 2026-05-01
+date: 2026-09-01
 venue: 'NeurIPS 2026'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'https://arxiv.org/pdf/2605.21061'

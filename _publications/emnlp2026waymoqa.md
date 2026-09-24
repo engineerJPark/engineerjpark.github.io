@@ -5,7 +5,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/emnlp2026waymoqa
 excerpt: ''
-date: 2026-9-01
+date: 2026-08-01
 venue: 'EMNLP 2026 Findings'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'https://arxiv.org/pdf/2511.20022'
