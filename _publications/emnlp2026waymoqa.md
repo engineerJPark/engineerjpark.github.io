@@ -6,7 +6,7 @@ category: manuscripts
 permalink: /publication/emnlp2026waymoqa
 excerpt: ''
 date: 2026-08-01
-venue: 'EMNLP 2026 Findings'
+venue: 'EMNLP Findings'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'https://arxiv.org/pdf/2511.20022'
 citation: 'Seungjun Yu, Seonho Lee, Namho Kim, Jaeyo Shin, <span class="underline">Junsung Park</span>, Wonjeong Ryu, Raehyuk Jung, Hyunjung Shim'
