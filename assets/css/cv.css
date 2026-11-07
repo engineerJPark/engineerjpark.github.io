@@ -111,19 +111,6 @@ ol.pubs li::marker, ol.numbered li::marker { color: #444; }
 .me { font-weight: 700; color: #222; text-decoration: underline; text-decoration-thickness: .6pt; text-underline-offset: 2pt; }
 .venue { color: var(--accent); }
 .lnk { color: var(--accent); font-size: 9pt; }
-.pills { margin-top: 1mm; display: flex; flex-wrap: wrap; gap: 1.4mm; }
-.pill {
-  font-size: 7.6pt; line-height: 1; padding: .9mm 2.2mm;
-  border-radius: 999px; border: .6pt solid; color: #444;
-}
-.pill-1 { background: #f3f3f3; border-color: #c9c9c9; }  /* Selected (not shown) */
-.pill-2 { background: #fff1e6; border-color: #f2b27c; }  /* Autonomous Driving */
-.pill-3 { background: #eaf1fd; border-color: #8fb1ec; }  /* VLM */
-.pill-4 { background: #eaf7ea; border-color: #93cf93; }  /* LiDAR */
-.pill-5 { background: #fdeef5; border-color: #ec9fc4; }
-.pill-6 { background: #fffbe6; border-color: #e8d36b; }
-
-footer { margin-top: 5mm; text-align: right; color: #aaa; font-size: 8pt; }
 
 /* ---------- Print ---------- */
 @page { size: A4; margin: 0; }

@@ -98,8 +98,6 @@ title: CV
           {% if pub.links.pdf %}<a class="lnk" href="{{ pub.links.pdf }}">[Paper]</a>{% elsif pub.links.arxiv %}<a class="lnk" href="{{ pub.links.arxiv }}">[Paper]</a>{% endif %}
           {% if pub.links.code %}<a class="lnk" href="{{ pub.links.code }}">[Code]</a>{% endif %}
           {% if pub.links.project %}<a class="lnk" href="{{ pub.links.project }}">[Project]</a>{% endif %}
-          {%- capture pills -%}{% for t in pub.tags %}{% unless t == "Selected" %}{% for f in p.pub_filters %}{% if f == t %}<span class="pill pill-{{ forloop.index }}">{{ t }}</span>{% endif %}{% endfor %}{% endunless %}{% endfor %}{%- endcapture -%}
-          {% if pills != "" %}<div class="pills">{{ pills }}</div>{% endif %}
         </li>
       {% endunless %}{% endfor %}
       </ol>
@@ -159,8 +157,6 @@ title: CV
       </ul>
       {% endif %}
     </section>
-
-    <footer>Last updated: {{ site.time | date: "%B %Y" }}</footer>
   </div>
 </body>
 </html>
