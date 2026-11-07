@@ -1,0 +1,22 @@
+{%- comment -%}
+  Renders a project's links as " [Code] [PDF] [Video]".
+  Params: links (map), cls (CSS class), newtab (true/false),
+          absolute (true -> site-relative paths become full URLs; used in the CV so links survive "Save as PDF").
+{%- endcomment -%}
+{%- assign order = "code,pdf,paper,video,project" | split: "," -%}
+{%- for k in order -%}
+  {%- assign href = include.links[k] -%}
+  {%- if href and href != "" -%}
+    {%- unless href contains "://" -%}
+      {%- if include.absolute -%}{%- assign href = href | absolute_url -%}{%- else -%}{%- assign href = href | relative_url -%}{%- endif -%}
+    {%- endunless -%}
+    {%- case k -%}
+      {%- when "code" -%}{%- assign label = "Code" -%}
+      {%- when "pdf" -%}{%- assign label = "PDF" -%}
+      {%- when "paper" -%}{%- assign label = "Paper" -%}
+      {%- when "video" -%}{%- assign label = "Video" -%}
+      {%- else -%}{%- assign label = "Project" -%}
+    {%- endcase -%}
+    {{ " " }}<a class="{{ include.cls }}" href="{{ href }}"{% if include.newtab %} target="_blank" rel="noopener"{% endif %}>[{{ label }}]</a>
+  {%- endif -%}
+{%- endfor -%}

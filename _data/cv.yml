@@ -102,17 +102,28 @@ patents:
     cv: false
 
 projects:
+  # links: any of code, pdf, paper, video, project (rendered in that order as [Code] [PDF] ...)
   - title: "IROS 2025 RoboSense Challenge, Track 1: Driving with Language"
     detail: "Developed a prompting method that helps VLMs understand driving scenes. Placed 4th."
     year: 2025
+    links:
+      pdf: "https://arxiv.org/pdf/2510.19001"
   - title: "Open Manipulator Grasping Task: Vision for Robot Arm Control"
     detail: "Undergraduate project. Vision modules for robot-arm grasping; 3D grasp position from FCN segmentation and a pinhole camera model."
     year: 2022
-    link: "https://github.com/engineerJPark/Segmentation-to-World-Coordinate-by-FCN-and-Camera-Calibration"
+    links:
+      code: "https://github.com/engineerJPark/Segmentation-to-World-Coordinate-by-FCN-and-Camera-Calibration"
+  - title: "Capstone Design: Motor-Driven Screw Mechanism"
+    detail: "Undergraduate capstone project. Designed a helical screw mechanism in CAD and implemented Arduino PWM motor control."
+    year: 2021
+    links:
+      code: "https://github.com/engineerJPark/2021-Capstone-Design"
+      video: "https://youtu.be/xhNzaWoJ35w"
   - title: "Mobile Robot Project: ROS Programming & Motor Control"
     detail: "Undergraduate project. ROS1 programming and embedded motor control on an OpenCM board."
     year: 2021
-    link: "https://github.com/kasimov-ku/2021-project-emb-motorcontrol"
+    links:
+      code: "https://github.com/kasimov-ku/2021-project-emb-motorcontrol"
   - title: "Capstone Design: Stair Treads Wheels"
     detail: "Undergraduate project. Designed stair-climbing wheels and their rotation control. Bronze Prize."
     year: 2018

@@ -8,7 +8,7 @@
   --light: #7a7a7a;
   --rule: #5d5d5d;
   --page-x: 15mm;           /* left/right page margin */
-  --page-y: 12mm;           /* top/bottom page margin (repeated on every page) */
+  --page-y: 11mm;           /* top/bottom page margin (repeated on every page) */
 }
 
 * { box-sizing: border-box; }
@@ -72,10 +72,10 @@ a { color: inherit; text-decoration: none; }
 .contact .sep { color: #999; }
 
 /* ---------- Sections ---------- */
-section { margin-top: 3.4mm; }
+section { margin-top: 2.6mm; }
 h2 {
   display: flex; align-items: center; gap: 2.5mm;
-  margin: 0 0 2.2mm;
+  margin: 0 0 1.8mm;
   color: var(--accent);
   font-size: 14.5pt; font-weight: 700; line-height: 1.1;
   break-after: avoid;
@@ -85,7 +85,7 @@ h4 { margin: 2.4mm 0 .6mm; font-size: 9.6pt; font-weight: 700; color: #3a3a3a; b
 
 .para { margin: 0; color: var(--gray); font-size: 10.5pt; text-align: justify; }
 
-.entry { margin: 0 0 2.2mm; break-inside: avoid; }
+.entry { margin: 0 0 1.8mm; break-inside: avoid; }
 .l1, .l2 { display: flex; justify-content: space-between; align-items: baseline; gap: 6mm; }
 .org { font-weight: 700; color: #3a3a3a; font-size: 10.3pt; }
 .loc { color: var(--accent); font-style: italic; font-weight: 300; font-size: 9.6pt; white-space: nowrap; }
@@ -118,7 +118,7 @@ ul.refs code { font: 9pt "Roboto Mono", ui-monospace, Consolas, monospace; color
 /* Publications */
 .legend { margin: -.6mm 0 1.6mm; color: var(--light); font-size: 8.6pt; font-style: italic; }
 ol.pubs, ol.numbered { margin: 0; padding-left: 6mm; text-align: justify; }
-ol.pubs li, ol.numbered li { margin: 0 0 1.8mm; padding-left: 1mm; break-inside: avoid; color: #444; }
+ol.pubs li, ol.numbered li { margin: 0 0 1.4mm; padding-left: 1mm; break-inside: avoid; color: #444; }
 ol.pubs li::marker, ol.numbered li::marker { color: #444; }
 .me { font-weight: 700; color: #222; text-decoration: underline; text-decoration-thickness: .6pt; text-underline-offset: 2pt; }
 .venue { color: var(--accent); }

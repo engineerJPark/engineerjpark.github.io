@@ -168,7 +168,7 @@
       <h2>{{ title }}</h2>
       {% for x in cv.projects %}{% unless x.cv == false %}
       <div class="entry">
-        <div class="l1"><span class="org">{{ x.title }}{% if x.link %} <a class="lnk" href="{{ x.link }}">[Code]</a>{% endif %}</span><span class="date">{{ x.year }}</span></div>
+        <div class="l1"><span class="org">{{ x.title }}{% if x.links %}{% include project_links.html links=x.links cls="lnk" absolute=true %}{% endif %}</span><span class="date">{{ x.year }}</span></div>
         <ul class="bul"><li>{{ x.detail }}</li></ul>
       </div>
       {% endunless %}{% endfor %}
