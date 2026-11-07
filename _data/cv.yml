@@ -127,6 +127,8 @@ projects:
   - title: "Capstone Design: Stair Treads Wheels"
     detail: "Undergraduate project. Designed stair-climbing wheels and their rotation control. Bronze Prize."
     year: 2018
+    links:
+      pdf: "/assets/pdf/capstone_design_2018.pdf"   # e-mail addresses removed
 
 lab_service:
   - role: "Student Lab Leader"
