@@ -122,6 +122,7 @@ ol.pubs li, ol.numbered li { margin: 0 0 1.8mm; padding-left: 1mm; break-inside:
 ol.pubs li::marker, ol.numbered li::marker { color: #444; }
 .me { font-weight: 700; color: #222; text-decoration: underline; text-decoration-thickness: .6pt; text-underline-offset: 2pt; }
 .venue { color: var(--accent); }
+.venue .note { font-weight: 700; }
 .lnk { color: var(--accent); font-size: 9pt; }
 
 /* ---------- Print ---------- */

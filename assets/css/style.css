@@ -150,9 +150,9 @@ h3 { font-size: 15px; font-weight: 500; color: var(--accent); margin: 16px 0 6px
 .me { color: var(--heading); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #bbb; }
 .pub .venue { font-size: 14px; font-style: italic; margin-top: 2px; }
 .badge {
-  font-style: normal; font-size: 12px; font-weight: 500;
+  font-style: normal; font-size: 14px; font-weight: 700;
   color: #b3261e; background: #fdecea;
-  border-radius: 6px; padding: 1px 8px; margin-left: 6px;
+  border-radius: 6px; padding: 1px 9px; margin-left: 6px;
 }
 .pub-links { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px 0; font-size: 14px; }
 .pub-links a { display: inline-flex; align-items: center; gap: 5px; }
