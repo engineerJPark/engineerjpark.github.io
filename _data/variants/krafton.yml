@@ -1,0 +1,48 @@
+# ---------------------------------------------------------------
+# Krafton-tailored CV  ->  /cv/krafton/
+# Only what differs from the default CV goes here; everything else
+# (education, publications, teaching, ...) comes from cv.yml and
+# publications.yml, so both CVs stay in sync.
+# ---------------------------------------------------------------
+
+sections:
+  - education
+  - experience
+  - research_interest
+  - research_experience
+  - teaching
+  - publications
+  - presentations
+  - invited_talks
+  - projects
+  - lab_service
+  - awards
+  - reviewer
+  - skills
+  - languages
+  - references
+
+section_titles:
+  research_interest: "Research Interest"
+  awards: "Awards and Honors"
+  skills: "Technical Skills"
+
+research_interest:
+  - "Vision-Language-Action Models & World Action Models"
+  - "Cross-Task-Embodiment Unification."
+
+research_experience:
+  - "Pursue research on physical AI for real-world applications. Initial work on LiDAR-based 3D perception in adverse weather led to papers accepted at ECCV (Oral) and CVPR."
+  - "Extended this research to driving vision-language-action (VLA) models for end-to-end planning, resulting in a paper accepted at NeurIPS."
+  - "Currently investigate reasoning faithfulness in driving VLA models at Qualcomm AI Research."
+  - "Interested in developing a unified physical AI agent by learning a shared dynamics embedding across game and real-world environments, tasks, and embodiments."
+
+languages: "Korean (Fluent), English (Intermediate)"
+
+references:
+  - name: "Hyunjung Shim"
+    org: "KAIST"
+    email: "kateshim@kaist.ac.kr"
+  - name: "Yongho Shin"
+    org: "Qualcomm AI Research"
+    email: "yshin@qti.qualcomm.com"

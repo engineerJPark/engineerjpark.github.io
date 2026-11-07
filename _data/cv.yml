@@ -9,9 +9,43 @@
 # `location` (education/experience) is optional; it shows top-right in the CV.
 # ---------------------------------------------------------------
 
-research_interest: >-
-  End-to-end autonomous driving, vision-language-action (VLA) models for planning,
-  and robust 3D perception for safety-critical scenarios.
+# ---------------------------------------------------------------
+# CV layout: which sections appear, in what order, and their titles.
+# A tailored CV (e.g. _data/variants/krafton.yml) can override any of
+# these, plus research_interest / research_experience / languages / references.
+#
+# Available sections:
+#   research_interest, research_experience, education, experience, skills,
+#   teaching, publications, presentations, invited_talks, patents, projects,
+#   lab_service, awards, reviewer, service (talks + TA + reviewer + lab service),
+#   languages, references
+# ---------------------------------------------------------------
+sections: [research_interest, education, skills, experience, publications, patents, projects, awards, service]
+
+section_titles:
+  research_interest: "Research Interests"
+  research_experience: "Research Experience"
+  education: "Education"
+  experience: "Experience"
+  skills: "Skills"
+  teaching: "Teaching Experience"
+  publications: "Publications"
+  presentations: "Conference Presentations"
+  invited_talks: "Invited Talks"
+  patents: "Patents"
+  projects: "Projects"
+  lab_service: "Lab Service"
+  awards: "Awards"
+  reviewer: "Reviewer"
+  service: "Service"
+  languages: "Languages"
+  references: "References"
+
+# One item renders as a paragraph; several render as separate lines.
+research_interest:
+  - >-
+    End-to-end autonomous driving, vision-language-action (VLA) models for planning,
+    and robust 3D perception for safety-critical scenarios.
 
 education:
   - school: "Korea Advanced Institute of Science and Technology (KAIST)"
@@ -76,11 +110,9 @@ projects:
     detail: "Undergraduate project. ROS1 programming and embedded motor control on an OpenCM board."
     year: 2021
     link: "https://github.com/kasimov-ku/2021-project-emb-motorcontrol"
-    cv: false
   - title: "Capstone Design: Stair Treads Wheels"
     detail: "Undergraduate project. Designed stair-climbing wheels and their rotation control. Bronze Prize."
     year: 2018
-    cv: false
 
 lab_service:
   - role: "Student Lab Leader"

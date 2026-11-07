@@ -1,0 +1,253 @@
+{%- comment -%}
+  Printable CV layout (Awesome-CV style). Content comes from _data/cv.yml and
+  _data/publications.yml. A page may set `variant: <name>` to apply overrides
+  from _data/variants/<name>.yml (section order, titles, research interest, ...).
+{%- endcomment -%}
+{%- assign p = site.data.profile -%}
+{%- assign cv = site.data.cv -%}
+{%- assign v = nil -%}
+{%- if page.variant -%}{%- assign v = site.data.variants[page.variant] -%}{%- endif -%}
+{%- assign sections = v.sections | default: cv.sections -%}
+{%- assign research_interest = v.research_interest | default: cv.research_interest -%}
+{%- assign research_experience = v.research_experience | default: cv.research_experience -%}
+{%- assign languages = v.languages | default: cv.languages -%}
+{%- assign references = v.references | default: cv.references -%}
+{%- assign name_parts = p.name | split: " " -%}
+{%- assign last_name = name_parts | last -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- if page.noindex %}
+  <meta name="robots" content="noindex, nofollow">
+  {%- endif %}
+  {%- comment -%} The title becomes the default file name when saving as PDF. {%- endcomment %}
+  <title>{{ p.name | replace: " ", "_" }}_CV</title>
+  <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+  <div class="toolbar no-print">
+    <a href="{{ '/' | relative_url }}">&larr; Homepage</a>
+    <button onclick="window.print()">Save as PDF</button>
+  </div>
+
+  <div class="page">
+    <header class="cv-header">
+      <h1>{{ p.name | remove: last_name | strip }} <span class="accent">{{ last_name }}</span></h1>
+      <div class="position">{{ p.position }}</div>
+      <div class="contact">
+        <span>{% include icon.html name="email" %}{{ p.links.email }}</span>
+        <span class="sep">|</span>
+        <span><a href="{{ site.url }}">{% include icon.html name="project" %}{{ site.url | remove: "https://" }}</a></span>
+        {% if p.links.github %}<span class="sep">|</span>
+        <span><a href="{{ p.links.github }}">{% include icon.html name="github" %}{{ p.links.github | split: "/" | last }}</a></span>{% endif %}
+        {% if p.links.linkedin %}<span class="sep">|</span>
+        <span><a href="{{ p.links.linkedin }}">{% include icon.html name="linkedin" %}LinkedIn</a></span>{% endif %}
+        {% if p.links.scholar %}<span class="sep">|</span>
+        <span><a href="{{ p.links.scholar }}">{% include icon.html name="scholar" %}Google Scholar</a></span>{% endif %}
+      </div>
+    </header>
+
+    {% for s in sections %}
+    {%- assign title = v.section_titles[s] | default: cv.section_titles[s] -%}
+    {% case s %}
+
+    {% when "research_interest" %}{% if research_interest.size > 0 %}
+    <section>
+      <h2>{{ title }}</h2>
+      {% if research_interest.size == 1 %}<p class="para">{{ research_interest[0] }}</p>
+      {% else %}{% for x in research_interest %}<p class="para line">{{ x }}</p>{% endfor %}{% endif %}
+    </section>
+    {% endif %}
+
+    {% when "research_experience" %}{% if research_experience.size > 0 %}
+    <section>
+      <h2>{{ title }}</h2>
+      <ul class="bul para-bul">{% for x in research_experience %}<li>{{ x }}</li>{% endfor %}</ul>
+    </section>
+    {% endif %}
+
+    {% when "education" %}
+    <section>
+      <h2>{{ title }}</h2>
+      {% for e in cv.education %}{% unless e.cv == false %}
+      <div class="entry">
+        <div class="l1"><span class="org">{{ e.school }}</span><span class="loc">{{ e.location }}</span></div>
+        <div class="l2"><span class="pos">{{ e.degree }}</span><span class="date">{{ e.period }}</span></div>
+        {% if e.detail or e.highlights %}<ul class="bul">
+          {% if e.detail %}<li>{{ e.detail }}</li>{% endif %}
+          {% for h in e.highlights %}<li>{{ h }}</li>{% endfor %}
+        </ul>{% endif %}
+      </div>
+      {% endunless %}{% endfor %}
+    </section>
+
+    {% when "experience" %}{% if cv.experience.size > 0 %}
+    <section>
+      <h2>{{ title }}</h2>
+      {% for e in cv.experience %}{% unless e.cv == false %}
+      <div class="entry">
+        <div class="l1"><span class="org">{{ e.org }}</span><span class="loc">{{ e.location }}</span></div>
+        <div class="l2"><span class="pos">{{ e.role }}</span><span class="date">{{ e.period }}</span></div>
+        {% if e.highlights %}<ul class="bul">{% for h in e.highlights %}<li>{{ h }}</li>{% endfor %}</ul>{% endif %}
+      </div>
+      {% endunless %}{% endfor %}
+    </section>
+    {% endif %}
+
+    {% when "skills" %}{% if cv.skills.size > 0 %}
+    <section>
+      <h2>{{ title }}</h2>
+      <div class="skills">
+        {% for x in cv.skills %}<div class="sk-label">{{ x.label }}</div><div class="sk-text">{{ x.text }}</div>{% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% when "teaching" %}{% if cv.teaching.size > 0 %}
+    <section>
+      <h2>{{ title }}</h2>
+      {% for x in cv.teaching %}{% unless x.cv == false %}
+      <div class="entry tight">
+        <div class="l1"><span class="org">{{ x.course }}<span class="role">, {{ x.role }}, KAIST</span></span><span class="date">{{ x.term }}</span></div>
+      </div>
+      {% endunless %}{% endfor %}
+    </section>
+    {% endif %}
+
+    {% when "publications" %}
+    <section>
+      <h2>{{ title }}</h2>
+      <p class="legend">* denotes equal contribution</p>
+      <ol class="pubs">
+      {% for pub in site.data.publications %}{% unless pub.cv == false %}
+        <li>
+          {% include authors_cite.html list=pub.authors %}, &ldquo;{{ pub.title }},&rdquo;
+          <i class="venue">{{ pub.venue }}{% if pub.note %} {{ pub.note }}{% endif %}</i>, {{ pub.year }}.
+          {% if pub.links.pdf %}<a class="lnk" href="{{ pub.links.pdf }}">[Paper]</a>{% elsif pub.links.arxiv %}<a class="lnk" href="{{ pub.links.arxiv }}">[Paper]</a>{% endif %}
+          {% if pub.links.code %}<a class="lnk" href="{{ pub.links.code }}">[Code]</a>{% endif %}
+          {% if pub.links.project %}<a class="lnk" href="{{ pub.links.project }}">[Project]</a>{% endif %}
+        </li>
+      {% endunless %}{% endfor %}
+      </ol>
+    </section>
+
+    {% when "presentations" or "invited_talks" %}
+    {%- if s == "presentations" -%}{%- assign want = "Presentation" -%}{%- else -%}{%- assign want = "Invited" -%}{%- endif -%}
+    {%- assign n_talks = 0 -%}{%- for x in cv.talks -%}{%- if x.kind contains want -%}{%- unless x.cv == false -%}{%- assign n_talks = n_talks | plus: 1 -%}{%- endunless -%}{%- endif -%}{%- endfor -%}
+    {% if n_talks > 0 %}
+    <section>
+      <h2>{{ title }}</h2>
+      {% for x in cv.talks %}{% if x.kind contains want %}{% unless x.cv == false %}
+      <div class="entry">
+        <div class="l1"><span class="org">{{ x.event }}</span><span class="date">{{ x.date }}</span></div>
+        <div class="l2"><span class="pos">&ldquo;{{ x.title }}&rdquo;</span></div>
+      </div>
+      {% endunless %}{% endif %}{% endfor %}
+    </section>
+    {% endif %}
+
+    {% when "patents" %}
+    {%- assign n_patents = 0 -%}{%- for x in cv.patents -%}{%- unless x.cv == false -%}{%- assign n_patents = n_patents | plus: 1 -%}{%- endunless -%}{%- endfor -%}
+    {% if n_patents > 0 %}
+    <section>
+      <h2>{{ title }}</h2>
+      <ol class="numbered">
+        {% for x in cv.patents %}{% unless x.cv == false %}<li>&ldquo;{{ x.title }},&rdquo; <i class="venue">{{ x.detail }}</i>, {{ x.year }}.</li>{% endunless %}{% endfor %}
+      </ol>
+    </section>
+    {% endif %}
+
+    {% when "projects" %}
+    <section>
+      <h2>{{ title }}</h2>
+      {% for x in cv.projects %}{% unless x.cv == false %}
+      <div class="entry">
+        <div class="l1"><span class="org">{{ x.title }}{% if x.link %} <a class="lnk" href="{{ x.link }}">[Code]</a>{% endif %}</span><span class="date">{{ x.year }}</span></div>
+        <ul class="bul"><li>{{ x.detail }}</li></ul>
+      </div>
+      {% endunless %}{% endfor %}
+    </section>
+
+    {% when "lab_service" %}{% if cv.lab_service.size > 0 %}
+    <section>
+      <h2>{{ title }}</h2>
+      {% for x in cv.lab_service %}{% unless x.cv == false %}
+      <div class="entry tight">
+        <div class="l1"><span class="org">{{ x.role }}<span class="role">, {{ x.org }}</span></span><span class="date">{{ x.period }}</span></div>
+      </div>
+      {% endunless %}{% endfor %}
+    </section>
+    {% endif %}
+
+    {% when "awards" %}
+    <section>
+      <h2>{{ title }}</h2>
+      <ol class="numbered">
+        {% for x in cv.awards %}{% unless x.cv == false %}<li><b>{{ x.title }}</b>{% if x.detail %}: {{ x.detail }}{% endif %} ({{ x.year }})</li>{% endunless %}{% endfor %}
+      </ol>
+    </section>
+
+    {% when "reviewer" %}
+    <section>
+      <h2>{{ title }}</h2>
+      <ul class="bul para-bul">
+        {% for g in cv.service %}{% for i in g.items %}<li>{{ i | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}{% endfor %}
+      </ul>
+    </section>
+
+    {% when "service" %}
+    <section>
+      <h2>{{ title }}</h2>
+      {% if cv.talks.size > 0 %}
+      <h4>Talks</h4>
+      <ul class="bul">
+        {% for x in cv.talks %}{% unless x.cv == false %}<li>{{ x.kind }}, {{ x.event }}: &ldquo;{{ x.title }}&rdquo; ({{ x.date }}).</li>{% endunless %}{% endfor %}
+      </ul>
+      {% endif %}
+      {% if cv.teaching.size > 0 %}
+      <h4>Teaching Assistant</h4>
+      <ul class="bul">
+        {% for x in cv.teaching %}{% unless x.cv == false %}<li>{{ x.course }}, KAIST, {{ x.term }}</li>{% endunless %}{% endfor %}
+      </ul>
+      {% endif %}
+      {% for g in cv.service %}
+      <h4>{{ g.group | remove: "Conference " }}</h4>
+      <ul class="bul">
+        {% for i in g.items %}<li>{{ i | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}
+      </ul>
+      {% endfor %}
+      {% if cv.lab_service.size > 0 %}
+      <h4>Lab Service</h4>
+      <ul class="bul">
+        {% for x in cv.lab_service %}{% unless x.cv == false %}<li>{{ x.role }}, {{ x.org }} ({{ x.period }}).</li>{% endunless %}{% endfor %}
+      </ul>
+      {% endif %}
+    </section>
+
+    {% when "languages" %}{% if languages %}
+    <section>
+      <h2>{{ title }}</h2>
+      <p class="para">{{ languages }}</p>
+    </section>
+    {% endif %}
+
+    {% when "references" %}{% if references.size > 0 %}
+    <section>
+      <h2>{{ title }}</h2>
+      <ul class="refs">
+        {% for r in references %}<li><b>{{ r.name }}</b>, {{ r.org }}{% if r.email %} <span class="sep">|</span> <code>{{ r.email }}</code>{% endif %}</li>{% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    {% endcase %}
+    {% endfor %}
+  </div>
+</body>
+</html>
