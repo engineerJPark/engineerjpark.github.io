@@ -31,7 +31,7 @@ layout: default
     {% for f in p.pub_filters %}<button class="category-btn" data-filter="{{ f }}">{{ f }}</button>{% endfor %}
   </div>
 
-  {% for pub in site.data.publications %}
+  {% for pub in site.data.publications %}{% if pub.site == false %}{% continue %}{% endif %}
   <article class="pub" data-tags="{{ pub.tags | join: '|' }}">
     <div class="pub-thumb">
       {% if pub.thumb %}
@@ -66,20 +66,31 @@ layout: default
 <section id="experience">
   <h2>Education &amp; Experience</h2>
   <ul class="plain">
-    {% for e in cv.experience %}
-    <li><span class="when">{{ e.period }}</span><div><b>{{ e.role }}</b>, {{ e.org }}</div></li>
-    {% endfor %}
-    {% for e in cv.education %}
+    {% for e in cv.experience %}{% unless e.site == false %}
+    <li><span class="when">{{ e.period }}</span><div><b>{{ e.role }}</b>, {{ e.org }}{% for h in e.highlights %}<br><span class="sub">{{ h }}</span>{% endfor %}</div></li>
+    {% endunless %}{% endfor %}
+    {% for e in cv.education %}{% unless e.site == false %}
     <li><span class="when">{{ e.period }}</span><div><b>{{ e.degree }}</b>, {{ e.school }}</div></li>
-    {% endfor %}
+    {% endunless %}{% endfor %}
   </ul>
 </section>
+
+{% if cv.talks.size > 0 %}
+<section id="talks">
+  <h2>Talks</h2>
+  <ul class="plain">
+    {% for x in cv.talks %}{% unless x.site == false %}
+    <li><span class="when">{{ x.date }}</span><div><b>{{ x.kind }}</b>, {{ x.event }}<br><span class="sub">{{ x.title }}</span></div></li>
+    {% endunless %}{% endfor %}
+  </ul>
+</section>
+{% endif %}
 
 {% if cv.patents.size > 0 %}
 <section id="patents">
   <h2>Patents</h2>
   <ul class="plain">
-    {% for x in cv.patents %}<li><span class="when">{{ x.year }}</span><div><b>{{ x.title }}</b>. {{ x.detail }}</div></li>{% endfor %}
+    {% for x in cv.patents %}{% unless x.site == false %}<li><span class="when">{{ x.year }}</span><div><b>{{ x.title }}</b><br><span class="sub">{{ x.detail }}</span></div></li>{% endunless %}{% endfor %}
   </ul>
 </section>
 {% endif %}
@@ -87,23 +98,36 @@ layout: default
 <section id="projects">
   <h2>Projects</h2>
   <ul class="plain">
-    {% for x in cv.projects %}
+    {% for x in cv.projects %}{% unless x.site == false %}
     <li><span class="when">{{ x.year }}</span><div><b>{% if x.link %}<a href="{{ x.link }}" target="_blank" rel="noopener">{{ x.title }}</a>{% else %}{{ x.title }}{% endif %}</b><br><span class="sub">{{ x.detail }}</span></div></li>
-    {% endfor %}
+    {% endunless %}{% endfor %}
   </ul>
 </section>
 
 <section id="awards">
   <h2>Awards &amp; Honors</h2>
   <ul class="plain">
-    {% for x in cv.awards %}<li><span class="when">{{ x.year }}</span><div>{{ x.title }}</div></li>{% endfor %}
+    {% for x in cv.awards %}{% unless x.site == false %}<li><span class="when">{{ x.year }}</span><div>{% if x.detail %}<b>{{ x.detail }}</b>, {% endif %}{{ x.title }}</div></li>{% endunless %}{% endfor %}
   </ul>
 </section>
+
+{% if cv.teaching.size > 0 %}
+<section id="teaching">
+  <h2>Teaching</h2>
+  <ul class="plain">
+    {% for x in cv.teaching %}{% unless x.site == false %}<li><span class="when">{{ x.term }}</span><div><b>{{ x.course }}</b>, {{ x.role }}, KAIST</div></li>{% endunless %}{% endfor %}
+  </ul>
+</section>
+{% endif %}
 
 <section id="service">
   <h2>Academic Services</h2>
   {% for g in cv.service %}
   <h3>{{ g.group }}</h3>
-  <ul>{% for i in g.items %}<li>{{ i }}</li>{% endfor %}</ul>
+  <ul>{% for i in g.items %}<li>{{ i | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}</ul>
   {% endfor %}
+  {% if cv.lab_service.size > 0 %}
+  <h3>Lab Service</h3>
+  <ul>{% for x in cv.lab_service %}{% unless x.site == false %}<li>{{ x.role }}, {{ x.org }} ({{ x.period }})</li>{% endunless %}{% endfor %}</ul>
+  {% endif %}
 </section>

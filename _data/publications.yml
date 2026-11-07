@@ -11,6 +11,7 @@
 #   tags     : names from pub_filters in profile.yml
 #   thumb    : image path, e.g. /images/paper/foo.png (optional; a placeholder is drawn if empty)
 #   links    : any of pdf, arxiv, code, project, poster, video (all optional)
+#   cv       : false to show on the homepage only (optional)
 # ---------------------------------------------------------------
 
 - title: "Grounding Driving VLA via Inverse Kinematics"
@@ -22,7 +23,8 @@
   tags: [Selected, Autonomous Driving, VLM]
   thumb:
   links:
-    pdf: "https://arxiv.org/pdf/2605.21061"
+    pdf: "https://arxiv.org/abs/2605.21061"
+    code: "https://github.com/engineerJPark/DriveIK"
 
 - title: "WaymoQA: A Multi-View Visual Question Answering Dataset for Safety-Critical Reasoning in Autonomous Driving"
   authors: ["Seungjun Yu", "Seonho Lee", "Namho Kim", "Jaeyo Shin", "Junsung Park", "Wonjeong Ryu", "Raehyuk Jung", "Hyunjung Shim"]
@@ -33,7 +35,7 @@
   tags: [Autonomous Driving, VLM]
   thumb:
   links:
-    pdf: "https://arxiv.org/pdf/2511.20022"
+    pdf: "https://arxiv.org/abs/2511.20022"
 
 - title: "SUPER-AD: Semantic Uncertainty-aware Planning for End-to-End Robust Autonomous Driving"
   authors: ["Wonjeong Ryu", "Seungjun Yu", "Seokha Moon", "Hojun Choi", "Junsung Park", "Jinkyu Kim", "Hyunjung Shim"]
@@ -43,7 +45,7 @@
   tags: [Autonomous Driving]
   thumb:
   links:
-    pdf: "https://arxiv.org/pdf/2511.22865"
+    pdf: "https://arxiv.org/abs/2511.22865"
 
 - title: "Scene, Class, Signal: Tri-Level Adaptation for Synthetic-to-Real LiDAR Segmentation"
   authors: ["Junsung Park", "Hyunjung Shim"]
@@ -54,17 +56,18 @@
   thumb:
   links:
     pdf: "https://openreview.net/pdf?id=8xjCp4OA6k"
+  cv: false   # not in the LaTeX CV
 
 - title: "Robust Driving QA through Metadata-Grounded Context and Task-Specific Prompts"
   authors: ["Seungjun Yu*", "Junsung Park*", "Youngsun Lim", "Hyunjung Shim"]
-  venue: "IROS RoboSense Challenge"
-  venue_full: "IROS 2025 RoboSense Challenge, Technical Report"
+  venue: "IROS Workshop"
+  venue_full: "IROS 2025 Workshop, RoboSense Challenge"
   year: 2025
-  type: report
+  type: workshop
   tags: [Autonomous Driving, VLM]
   thumb:
   links:
-    pdf: "https://arxiv.org/pdf/2510.19001"
+    pdf: "https://arxiv.org/abs/2510.19001"
 
 - title: "3D-Aware Vision-Language Models Fine-Tuning with Geometric Distillation"
   authors: ["Seonho Lee*", "Jiho Choi*", "Inha Kang", "Jiwook Kim", "Junsung Park", "Hyunjung Shim"]
@@ -76,6 +79,7 @@
   thumb:
   links:
     pdf: "https://aclanthology.org/2025.findings-emnlp.562.pdf"
+    arxiv: "https://arxiv.org/abs/2506.09883"
 
 - title: "No Thing, Nothing: Highlighting Safety-Critical Classes for Robust LiDAR Semantic Segmentation in Adverse Weather"
   authors: ["Junsung Park", "Hwijeong Lee", "Inha Kang", "Hyunjung Shim"]
@@ -86,7 +90,8 @@
   tags: [Selected, LiDAR]
   thumb:
   links:
-    pdf: "https://arxiv.org/pdf/2503.15910"
+    pdf: "https://arxiv.org/abs/2503.15910"
+    code: "https://github.com/engineerJPark/NTN"
 
 - title: "Rethinking Data Augmentation for Robust LiDAR Semantic Segmentation in Adverse Weather"
   authors: ["Junsung Park", "Kyungmin Kim", "Hyunjung Shim"]
@@ -98,7 +103,8 @@
   tags: [Selected, LiDAR]
   thumb:
   links:
-    pdf: "https://arxiv.org/pdf/2407.02286"
+    pdf: "https://arxiv.org/abs/2407.02286"
+    code: "https://github.com/engineerJPark/LiDAR-DataAug4Weather"
 
 - title: "Precision Matters: Precision-aware Ensemble for Weakly Supervised Semantic Segmentation"
   authors: ["Junsung Park", "Hyunjung Shim"]
@@ -109,4 +115,5 @@
   tags: []
   thumb:
   links:
-    pdf: "https://arxiv.org/pdf/2406.19638"
+    pdf: "https://arxiv.org/abs/2406.19638"
+    code: "https://github.com/engineerJPark/ORANDNet"

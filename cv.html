@@ -5,16 +5,19 @@ title: CV
 ---
 {%- assign p = site.data.profile -%}
 {%- assign cv = site.data.cv -%}
+{%- assign name_parts = p.name | split: " " -%}
+{%- assign last_name = name_parts | last -%}
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ p.name }} | CV</title>
+  {%- comment -%} The title becomes the default file name when saving as PDF. {%- endcomment %}
+  <title>{{ p.name | replace: " ", "_" }}_CV</title>
   <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body>
@@ -24,83 +27,137 @@ title: CV
   </div>
 
   <div class="page">
-    <header>
-      <h1>{{ p.name }}</h1>
+    <!-- Header -->
+    <header class="cv-header">
+      <h1>{{ p.name | remove: last_name | strip }} <span class="accent">{{ last_name }}</span></h1>
+      <div class="position">{{ p.position }}</div>
       <div class="contact">
-        {{ p.position }} &middot; {{ p.location }}<br>
-        {{ p.links.email }}
-        &middot; <a href="{{ site.url }}">{{ site.url | remove: "https://" }}</a>
-        {% if p.links.scholar %}&middot; <a href="{{ p.links.scholar }}">Google Scholar</a>{% endif %}
-        {% if p.links.github %}&middot; <a href="{{ p.links.github }}">GitHub</a>{% endif %}
-        {% if p.links.linkedin %}&middot; <a href="{{ p.links.linkedin }}">LinkedIn</a>{% endif %}
+        <span>{% include icon.html name="email" %}{{ p.links.email }}</span>
+        <span class="sep">|</span>
+        <span><a href="{{ site.url }}">{% include icon.html name="project" %}{{ site.url | remove: "https://" }}</a></span>
+        {% if p.links.github %}<span class="sep">|</span>
+        <span><a href="{{ p.links.github }}">{% include icon.html name="github" %}{{ p.links.github | split: "/" | last }}</a></span>{% endif %}
+        {% if p.links.linkedin %}<span class="sep">|</span>
+        <span><a href="{{ p.links.linkedin }}">{% include icon.html name="linkedin" %}LinkedIn</a></span>{% endif %}
+        {% if p.links.scholar %}<span class="sep">|</span>
+        <span><a href="{{ p.links.scholar }}">{% include icon.html name="scholar" %}Google Scholar</a></span>{% endif %}
       </div>
     </header>
 
+    {% if cv.research_interest %}
+    <section>
+      <h2>Research Interests</h2>
+      <p class="para">{{ cv.research_interest }}</p>
+    </section>
+    {% endif %}
+
     <section>
       <h2>Education</h2>
-      {% for e in cv.education %}
-      <div class="row"><div class="what"><b>{{ e.school }}</b>, {{ e.degree }}{% if e.detail %}<div class="sub">{{ e.detail }}</div>{% endif %}</div><div class="when">{{ e.period }}</div></div>
-      {% endfor %}
+      {% for e in cv.education %}{% unless e.cv == false %}
+      <div class="entry">
+        <div class="l1"><span class="org">{{ e.school }}</span><span class="loc">{{ e.location }}</span></div>
+        <div class="l2"><span class="pos">{{ e.degree }}</span><span class="date">{{ e.period }}</span></div>
+        {% if e.detail or e.highlights %}<ul class="bul">
+          {% if e.detail %}<li>{{ e.detail }}</li>{% endif %}
+          {% for h in e.highlights %}<li>{{ h }}</li>{% endfor %}
+        </ul>{% endif %}
+      </div>
+      {% endunless %}{% endfor %}
     </section>
+
+    {% if cv.skills.size > 0 %}
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        {% for x in cv.skills %}<div class="sk-label">{{ x.label }}</div><div class="sk-text">{{ x.text }}</div>{% endfor %}
+      </div>
+    </section>
+    {% endif %}
 
     {% if cv.experience.size > 0 %}
     <section>
       <h2>Experience</h2>
-      {% for e in cv.experience %}
-      <div class="row"><div class="what"><b>{{ e.org }}</b>, {{ e.role }}{% if e.detail %}<div class="sub">{{ e.detail }}</div>{% endif %}</div><div class="when">{{ e.period }}</div></div>
-      {% endfor %}
+      {% for e in cv.experience %}{% unless e.cv == false %}
+      <div class="entry">
+        <div class="l1"><span class="org">{{ e.org }}</span><span class="loc">{{ e.location }}</span></div>
+        <div class="l2"><span class="pos">{{ e.role }}</span><span class="date">{{ e.period }}</span></div>
+        {% if e.highlights %}<ul class="bul">{% for h in e.highlights %}<li>{{ h }}</li>{% endfor %}</ul>{% endif %}
+      </div>
+      {% endunless %}{% endfor %}
     </section>
     {% endif %}
 
     <section>
       <h2>Publications</h2>
-      <p class="legend">* equal contribution</p>
+      <p class="legend">* denotes equal contribution</p>
       <ol class="pubs">
-      {% for pub in site.data.publications %}
+      {% for pub in site.data.publications %}{% unless pub.cv == false %}
         <li>
-          <div class="row">
-            <div class="what">
-              <span class="ptitle">{{ pub.title }}.</span>
-              {% if pub.links.pdf %}<a href="{{ pub.links.pdf }}">[PDF]</a>{% endif %}
-              {% if pub.links.code %}<a href="{{ pub.links.code }}">[Code]</a>{% endif %}
-              {% if pub.links.project %}<a href="{{ pub.links.project }}">[Project]</a>{% endif %}
-              <div class="sub">{% include authors.html list=pub.authors %}</div>
-            </div>
-            <div class="when">{{ pub.venue }}{% if pub.note %}, <b>{{ pub.note }}</b>{% endif %}, {{ pub.year }}</div>
-          </div>
+          {% include authors_cite.html list=pub.authors %}, &ldquo;{{ pub.title }},&rdquo;
+          <i class="venue">{{ pub.venue }}{% if pub.note %} {{ pub.note }}{% endif %}</i>, {{ pub.year }}.
+          {% if pub.links.pdf %}<a class="lnk" href="{{ pub.links.pdf }}">[Paper]</a>{% elsif pub.links.arxiv %}<a class="lnk" href="{{ pub.links.arxiv }}">[Paper]</a>{% endif %}
+          {% if pub.links.code %}<a class="lnk" href="{{ pub.links.code }}">[Code]</a>{% endif %}
+          {% if pub.links.project %}<a class="lnk" href="{{ pub.links.project }}">[Project]</a>{% endif %}
+          {%- capture pills -%}{% for t in pub.tags %}{% unless t == "Selected" %}{% for f in p.pub_filters %}{% if f == t %}<span class="pill pill-{{ forloop.index }}">{{ t }}</span>{% endif %}{% endfor %}{% endunless %}{% endfor %}{%- endcapture -%}
+          {% if pills != "" %}<div class="pills">{{ pills }}</div>{% endif %}
         </li>
-      {% endfor %}
+      {% endunless %}{% endfor %}
       </ol>
     </section>
 
-    {% if cv.patents.size > 0 %}
+    {% assign n_patents = 0 %}{% for x in cv.patents %}{% unless x.cv == false %}{% assign n_patents = n_patents | plus: 1 %}{% endunless %}{% endfor %}
+    {% if n_patents > 0 %}
     <section>
       <h2>Patents</h2>
-      {% for x in cv.patents %}
-      <div class="row"><div class="what"><b>{{ x.title }}</b><div class="sub">{{ x.detail }}</div></div><div class="when">{{ x.year }}</div></div>
-      {% endfor %}
+      <ol class="numbered">
+        {% for x in cv.patents %}{% unless x.cv == false %}<li>&ldquo;{{ x.title }},&rdquo; <i class="venue">{{ x.detail }}</i>, {{ x.year }}.</li>{% endunless %}{% endfor %}
+      </ol>
     </section>
     {% endif %}
 
     <section>
       <h2>Projects</h2>
-      {% for x in cv.projects %}
-      <div class="row"><div class="what"><b>{{ x.title }}</b>{% if x.link %} <a href="{{ x.link }}">[GitHub]</a>{% endif %}<div class="sub">{{ x.detail }}</div></div><div class="when">{{ x.year }}</div></div>
-      {% endfor %}
+      {% for x in cv.projects %}{% unless x.cv == false %}
+      <div class="entry">
+        <div class="l1"><span class="org">{{ x.title }}{% if x.link %} <a class="lnk" href="{{ x.link }}">[Code]</a>{% endif %}</span><span class="date">{{ x.year }}</span></div>
+        <ul class="bul"><li>{{ x.detail }}</li></ul>
+      </div>
+      {% endunless %}{% endfor %}
     </section>
 
     <section>
-      <h2>Awards and Honors</h2>
-      {% for x in cv.awards %}
-      <div class="row"><div class="what">{{ x.title }}</div><div class="when">{{ x.year }}</div></div>
-      {% endfor %}
+      <h2>Awards</h2>
+      <ol class="numbered">
+        {% for x in cv.awards %}{% unless x.cv == false %}<li><b>{{ x.title }}</b>{% if x.detail %}: {{ x.detail }}{% endif %} ({{ x.year }})</li>{% endunless %}{% endfor %}
+      </ol>
     </section>
 
     <section>
-      <h2>Academic Services</h2>
+      <h2>Service</h2>
+      {% if cv.talks.size > 0 %}
+      <h4>Talks</h4>
+      <ul class="bul">
+        {% for x in cv.talks %}{% unless x.cv == false %}<li>{{ x.kind }}, {{ x.event }}: &ldquo;{{ x.title }}&rdquo; ({{ x.date }}).</li>{% endunless %}{% endfor %}
+      </ul>
+      {% endif %}
+      {% if cv.teaching.size > 0 %}
+      <h4>Teaching Assistant</h4>
+      <ul class="bul">
+        {% for x in cv.teaching %}{% unless x.cv == false %}<li>{{ x.course }}, KAIST, {{ x.term }}</li>{% endunless %}{% endfor %}
+      </ul>
+      {% endif %}
       {% for g in cv.service %}
-      <div class="row"><div class="what"><b>{{ g.group }}:</b> {{ g.items | join: "; " }}</div></div>
+      <h4>{{ g.group | remove: "Conference " }}</h4>
+      <ul class="bul">
+        {% for i in g.items %}<li>{{ i | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}
+      </ul>
       {% endfor %}
+      {% if cv.lab_service.size > 0 %}
+      <h4>Lab Service</h4>
+      <ul class="bul">
+        {% for x in cv.lab_service %}{% unless x.cv == false %}<li>{{ x.role }}, {{ x.org }} ({{ x.period }}).</li>{% endunless %}{% endfor %}
+      </ul>
+      {% endif %}
     </section>
 
     <footer>Last updated: {{ site.time | date: "%B %Y" }}</footer>

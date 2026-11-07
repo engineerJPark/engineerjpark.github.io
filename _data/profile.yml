@@ -20,10 +20,11 @@ bio:
     I received my B.S. in Mechanical Engineering & Artificial Intelligence from
     [Korea University](https://www.korea.edu/sites/en/index.do).
   - >-
-    I am a research intern at **Qualcomm AI Research**.
+    I am a research intern at **Qualcomm AI Research**, investigating reasoning
+    faithfulness in driving vision-language-action (VLA) models.
   - >-
-    I am interested in real-world problems such as autonomous driving, navigation,
-    and robotics.
+    My research focuses on end-to-end autonomous driving, VLA models for planning,
+    and robust 3D perception for safety-critical scenarios.
 
 # Filter buttons shown above the publication list.
 # Each publication's `tags` should use these names.

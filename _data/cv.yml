@@ -1,26 +1,68 @@
 # ---------------------------------------------------------------
 # Everything else that appears on the homepage and/or the CV.
 # Publications are in publications.yml, news in news.yml.
+#
+# Visibility flags (on any item):
+#   cv: false    -> shown on the homepage only, left out of the CV
+#   site: false  -> shown in the CV only, left off the homepage
+#
+# `location` (education/experience) is optional; it shows top-right in the CV.
 # ---------------------------------------------------------------
 
+research_interest: >-
+  End-to-end autonomous driving, vision-language-action (VLA) models for planning,
+  and robust 3D perception for safety-critical scenarios.
+
 education:
-  - school: "KAIST"
+  - school: "Korea Advanced Institute of Science and Technology (KAIST)"
+    location: "Seoul, South Korea"
     degree: "Ph.D. Candidate in Artificial Intelligence"
     detail: "Advisor: Prof. Hyunjung Shim"
-    period: "Aug 2023 – Present"
+    period: "2023 – Present"
   - school: "Korea University"
+    location: "Seoul, South Korea"
     degree: "B.S. in Mechanical Engineering & Artificial Intelligence"
-    period: "Mar 2017 – Aug 2023"
+    period: "2017 – 2023"
 
 experience:
   - org: "Qualcomm AI Research, Qualcomm Korea YH"
     role: "Research Intern"
     period: "May 2026 – Nov 2026"
+    highlights:
+      - "Investigate reasoning faithfulness in driving vision-language-action (VLA) models."
+
+teaching:
+  - course: "AI 621: Computational Photography"
+    role: "Teaching Assistant"
+    term: "Spring 2026"
+  - course: "AI 504: Programming for AI"
+    role: "Teaching Assistant"
+    term: "Fall 2025"
+  - course: "AI 621: Computational Photography"
+    role: "Teaching Assistant"
+    term: "Spring 2025"
+  - course: "AI 503: Math for AI"
+    role: "Teaching Assistant"
+    term: "Fall 2024"
+  - course: "AI 611: Deep Reinforcement Learning"
+    role: "Teaching Assistant"
+    term: "Spring 2024"
+
+talks:
+  - title: "Rethinking Data Augmentation for Robust LiDAR Semantic Segmentation in Adverse Weather"
+    event: "AI Tutorial Series, Seoul AI Hub"
+    kind: "Invited Talk"
+    date: "Apr 2025"
+  - title: "Rethinking Data Augmentation for Robust LiDAR Semantic Segmentation in Adverse Weather"
+    event: "ECCV 2024"
+    kind: "Oral Presentation"
+    date: "Sep 2024"
 
 patents:
   - title: "Barbell with Built-in Weight Fixing Device"
     detail: "Korea Patent, Reg. No. 1026314710000 (App. No. 10-2021-0092158)"
     year: 2024
+    cv: false
 
 projects:
   - title: "IROS 2025 RoboSense Challenge, Track 1: Driving with Language"
@@ -34,23 +76,42 @@ projects:
     detail: "Undergraduate project. ROS1 programming and embedded motor control on an OpenCM board."
     year: 2021
     link: "https://github.com/kasimov-ku/2021-project-emb-motorcontrol"
+    cv: false
   - title: "Capstone Design: Stair Treads Wheels"
     detail: "Undergraduate project. Designed stair-climbing wheels and their rotation control. Bronze Prize."
     year: 2018
+    cv: false
+
+lab_service:
+  - role: "Student Lab Leader"
+    org: "Prof. Hyunjung Shim's Lab, KAIST"
+    period: "Jul 2024 – May 2025"
+  - role: "Research Server Administrator (sole administrator)"
+    org: "Prof. Hyunjung Shim's Lab, KAIST"
+    period: "Aug 2023 – May 2025"
 
 awards:
-  - title: "Top Reviewer, NeurIPS 2026 (Main Track)"
-    year: "2026"
-  - title: "Scholarship, Lee Myungbak & Kim Yoonok Foundation"
+  - title: "Lee Myungbak & Kim Yoonok Foundation"
+    detail: "Scholarship"
     year: "2022 – 2023"
-  - title: "Scholarship, Korea University Alumni Association"
+  - title: "Korea University Alumni Association"
+    detail: "Scholarship"
     year: "2021 – 2023"
-  - title: "Bronze Prize & Social Contribution Prize, Capstone Design, Korea Univ. Innovation Center for Engineering"
+  - title: "Korea Univ. Innovation Center for Engineering"
+    detail: "Bronze Prize & Social Contribution Prize, Capstone Design Project"
     year: "2018"
+    cv: false
 
+# `items` accept Markdown (e.g. **bold**).
 service:
   - group: "Conference Reviewer"
     items:
-      - "Conference on Neural Information Processing Systems (NeurIPS) 2026"
-      - "International Conference on Learning Representations (ICLR) 2026"
-      - "AAAI Conference on Artificial Intelligence (AAAI) 2025"
+      - "NeurIPS 2026 (**Top Reviewer**, Main Track)"
+      - "ICLR 2026"
+      - "AAAI 2025"
+
+skills:
+  - label: "Programming"
+    text: "Python, PyTorch, Linux, multi-GPU distributed training"
+  - label: "Datasets & Simulators"
+    text: "nuScenes, NAVSIM, Waymo Open Dataset, CARLA"

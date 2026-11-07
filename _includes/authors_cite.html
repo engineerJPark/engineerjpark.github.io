@@ -1,0 +1,16 @@
+{%- comment -%}
+  Citation-style author list for the CV: "Park, J.*, Yu, S., and Shim, H."
+  Bolds/underlines the site owner. Usage: include authors_cite.html list=pub.authors
+{%- endcomment -%}
+{%- assign n = include.list | size -%}
+{%- for a in include.list -%}
+  {%- assign star = "" -%}{%- if a contains "*" -%}{%- assign star = "*" -%}{%- endif -%}
+  {%- assign clean = a | remove: "*" | strip -%}
+  {%- assign parts = clean | split: " " -%}
+  {%- assign surname = parts | last -%}
+  {%- capture initials -%}{%- for w in parts -%}{%- unless forloop.last -%}{{ w | slice: 0 }}. {% endunless -%}{%- endfor -%}{%- endcapture -%}
+  {%- capture cite -%}{{ surname }}, {{ initials | strip }}{{ star }}{%- endcapture -%}
+  {%- if forloop.last and n > 1 -%}{{ "and " }}{%- endif -%}
+  {%- if clean == site.data.profile.name -%}<span class="me">{{ cite }}</span>{%- else -%}{{ cite }}{%- endif -%}
+  {%- unless forloop.last -%}{%- if n == 2 -%}{{ " " }}{%- else -%}{{ ", " }}{%- endif -%}{%- endunless -%}
+{%- endfor -%}
