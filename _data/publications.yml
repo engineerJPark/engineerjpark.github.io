@@ -21,7 +21,7 @@
   venue_full: "Conference on Neural Information Processing Systems (NeurIPS)"
   year: 2026
   type: conference
-  tags: [Selected, Autonomous Driving, VLM]
+  tags: [Selected, Autonomous Driving, End-to-end Planning, Vision Language Action, World Model]
   thumb: /images/paper_thumb/neurips2026.webp
   links:
     pdf: "https://arxiv.org/abs/2605.21061"
@@ -33,7 +33,7 @@
   venue_full: "Findings of the Association for Computational Linguistics: EMNLP"
   year: 2026
   type: conference
-  tags: [Autonomous Driving, VLM]
+  tags: [Autonomous Driving, Vision Language Model]
   thumb: /images/paper_thumb/emnlpfindings2026.webp
   links:
     pdf: "https://arxiv.org/abs/2511.20022"
@@ -44,7 +44,7 @@
   venue: "Preprint"
   year: 2025
   type: preprint
-  tags: [Autonomous Driving]
+  tags: [Autonomous Driving, End-to-end Planning]
   thumb: /images/paper_thumb/preprint2025_2.webp
   links:
     pdf: "https://arxiv.org/abs/2511.22865"
@@ -54,7 +54,7 @@
   venue: "Preprint"
   year: 2025
   type: preprint
-  tags: [LiDAR]
+  tags: [LiDAR, Semantic Segmentation]
   thumb: /images/paper_thumb/preprint2025.webp
   links:
     pdf: "https://openreview.net/pdf?id=8xjCp4OA6k"
@@ -65,7 +65,7 @@
   venue_full: "IROS 2025 Workshop, RoboSense Challenge"
   year: 2025
   type: workshop
-  tags: [Autonomous Driving, VLM]
+  tags: [Autonomous Driving, Vision Language Model]
   thumb: /images/paper_thumb/iros2025.webp   # Figure 7 of arXiv 2510.19001
   links:
     pdf: "https://arxiv.org/abs/2510.19001"
@@ -76,7 +76,7 @@
   venue_full: "Findings of the Association for Computational Linguistics: EMNLP"
   year: 2025
   type: conference
-  tags: [VLM]
+  tags: [Vision Language Model]
   thumb: /images/paper_thumb/emnlpfindings2025.webp
   links:
     pdf: "https://aclanthology.org/2025.findings-emnlp.562.pdf"
@@ -89,7 +89,7 @@
   venue_full: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
   year: 2025
   type: conference
-  tags: [Selected, LiDAR]
+  tags: [Selected, LiDAR, Semantic Segmentation]
   thumb: /images/paper_thumb/cvpr2025.webp
   links:
     pdf: "https://arxiv.org/abs/2503.15910"
@@ -102,7 +102,7 @@
   year: 2024
   note: "Oral"
   type: conference
-  tags: [Selected, LiDAR]
+  tags: [Selected, LiDAR, Semantic Segmentation]
   thumb: /images/paper_thumb/eccv2024.webp
   links:
     pdf: "https://arxiv.org/abs/2407.02286"
