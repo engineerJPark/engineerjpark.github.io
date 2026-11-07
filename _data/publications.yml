@@ -66,7 +66,7 @@
   year: 2025
   type: workshop
   tags: [Autonomous Driving, VLM]
-  thumb:
+  thumb: /images/paper_thumb/iros2025.webp   # Figure 7 of arXiv 2510.19001
   links:
     pdf: "https://arxiv.org/abs/2510.19001"
 
