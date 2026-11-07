@@ -36,6 +36,7 @@
   thumb:
   links:
     pdf: "https://arxiv.org/abs/2511.20022"
+    code: "https://github.com/sjyu001/WaymoQA"
 
 - title: "SUPER-AD: Semantic Uncertainty-aware Planning for End-to-End Robust Autonomous Driving"
   authors: ["Wonjeong Ryu", "Seungjun Yu", "Seokha Moon", "Hojun Choi", "Junsung Park", "Jinkyu Kim", "Hyunjung Shim"]
@@ -79,6 +80,7 @@
   links:
     pdf: "https://aclanthology.org/2025.findings-emnlp.562.pdf"
     arxiv: "https://arxiv.org/abs/2506.09883"
+    code: "https://github.com/kaist-cvml/geometric-distillation"
 
 - title: "No Thing, Nothing: Highlighting Safety-Critical Classes for Robust LiDAR Semantic Segmentation in Adverse Weather"
   authors: ["Junsung Park", "Hwijeong Lee", "Inha Kang", "Hyunjung Shim"]
@@ -111,7 +113,7 @@
   venue_full: "AAAI Workshop"
   year: 2024
   type: workshop
-  tags: []
+  tags: [Semantic Segmentation]
   thumb:
   links:
     pdf: "https://arxiv.org/abs/2406.19638"
