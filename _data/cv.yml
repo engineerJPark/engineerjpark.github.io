@@ -135,7 +135,6 @@ awards:
   - title: "Korea Univ. Innovation Center for Engineering"
     detail: "Bronze Prize & Social Contribution Prize, Capstone Design Project"
     year: "2018"
-    cv: false
 
 # `items` accept Markdown (e.g. **bold**).
 service:
