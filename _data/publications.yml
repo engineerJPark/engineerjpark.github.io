@@ -56,7 +56,6 @@
   thumb:
   links:
     pdf: "https://openreview.net/pdf?id=8xjCp4OA6k"
-  cv: false   # not in the LaTeX CV
 
 - title: "Robust Driving QA through Metadata-Grounded Context and Task-Specific Prompts"
   authors: ["Seungjun Yu*", "Junsung Park*", "Youngsun Lim", "Hyunjung Shim"]
