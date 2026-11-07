@@ -23,8 +23,10 @@ bio:
     I am a research intern at **Qualcomm AI Research**, investigating reasoning
     faithfulness in driving vision-language-action (VLA) models.
   - >-
-    My research focuses on end-to-end autonomous driving, VLA models for planning,
-    and robust 3D perception for safety-critical scenarios.
+    My research focuses on Physical AI & LLMs. 
+    I have been working on autonomous driving, vision-language models (VLMs), and LiDAR perception. 
+    I am interested in building AI systems that can understand and interact with the physical world.
+    Recently, I'm interested in unifying various tasks and embodiments on a single VLA/WAM model.
 
 # Filter buttons shown above the publication list.
 # Each publication's `tags` should use these names.
