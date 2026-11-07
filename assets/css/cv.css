@@ -1,0 +1,70 @@
+/* Printable CV. Use the browser's Print → "Save as PDF" (A4, margins: default, no headers/footers). */
+:root { --accent: #004191; --text: #1d1d1f; --muted: #555; }
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #f2f3f5;
+  color: var(--text);
+  font: 400 10.5pt/1.4 "Source Serif 4", Georgia, serif;
+}
+a { color: var(--accent); text-decoration: none; }
+
+.toolbar {
+  max-width: 210mm; margin: 16px auto 0; padding: 0 4px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: system-ui, sans-serif; font-size: 14px;
+}
+.toolbar button {
+  font: inherit; padding: 6px 14px; border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--accent); background: var(--accent); color: #fff;
+}
+
+.page {
+  max-width: 210mm;
+  margin: 12px auto 40px;
+  padding: 16mm 17mm;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0,0,0,.08);
+}
+
+header { text-align: center; margin-bottom: 6mm; }
+h1 { font-size: 22pt; margin: 0 0 4px; font-weight: 700; letter-spacing: .02em; }
+.contact { color: var(--muted); font-size: 9.5pt; }
+
+h2 {
+  break-after: avoid;
+  font-size: 12pt; font-weight: 700; color: var(--accent);
+  text-transform: uppercase; letter-spacing: .06em;
+  border-bottom: 1px solid #c9d3e3;
+  margin: 5mm 0 2mm; padding-bottom: 1mm;
+}
+section { break-inside: auto; }
+
+.row { display: flex; gap: 6mm; justify-content: space-between; margin: 1.6mm 0; break-inside: avoid; }
+.what { flex: 1; min-width: 0; }
+.when { flex-shrink: 0; max-width: 45mm; text-align: right; color: var(--muted); font-style: italic; }
+.sub { color: var(--muted); font-size: 9.8pt; }
+.me { color: var(--text); font-weight: 700; }
+
+.legend { margin: 0 0 1mm; color: var(--muted); font-size: 9pt; font-style: italic; }
+ol.pubs { margin: 0; padding-left: 5mm; }
+ol.pubs li { padding-left: 1mm; }
+ol.pubs li::marker { color: var(--muted); font-size: 9pt; }
+.ptitle { font-weight: 600; }
+
+footer { margin-top: 6mm; text-align: right; color: #999; font-size: 8.5pt; }
+
+@page { size: A4; margin: 14mm 15mm; }
+@media print {
+  body { background: #fff; }
+  .no-print { display: none !important; }
+  .page { margin: 0; padding: 0; max-width: none; box-shadow: none; }
+  a { color: var(--text); }
+  .ptitle + a, .what > a { color: var(--accent); }
+}
+@media (max-width: 640px) {
+  .page { padding: 18px 16px; }
+  .row { flex-direction: column; gap: 0; }
+  .when { text-align: left; max-width: none; }
+}

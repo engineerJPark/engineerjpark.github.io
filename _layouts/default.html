@@ -1,31 +1,40 @@
----
-layout: compress
----
-
-{% include base_path %}
-
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}" sizes="any">
+  <link rel="icon" href="{{ '/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon-180x180.png' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+  <div id="scroll-progress"></div>
+  <div class="wrapper">
+    {% assign p = site.data.profile %}
+    <header class="sidebar">
+      <img class="avatar" src="{{ p.photo | relative_url }}" alt="{{ p.name }}">
+      <h1>{{ p.name }}</h1>
+      <p class="position">{{ p.position }}</p>
+      {% if p.links.email %}<p class="email">{% include icon.html name="email" %}<span>{{ p.links.email }}</span></p>{% endif %}
+      <nav class="personal-links" aria-label="Personal links">
+        {% if p.links.scholar %}<a class="personal-link" href="{{ p.links.scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">{% include icon.html name="scholar" %}</a>{% endif %}
+        {% if p.links.github %}<a class="personal-link" href="{{ p.links.github }}" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">{% include icon.html name="github" %}</a>{% endif %}
+        {% if p.links.linkedin %}<a class="personal-link" href="{{ p.links.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">{% include icon.html name="linkedin" %}</a>{% endif %}
+        <a class="personal-link" href="{{ '/cv/' | relative_url }}" aria-label="CV" title="CV">{% include icon.html name="cv" %}</a>
+      </nav>
+    </header>
 
-  <body>
-
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
-
-    {{ content }}
-
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
-
-    {% include scripts.html %}
-
-  </body>
+    <main class="content">
+      {{ content }}
+      <footer>&copy; {{ site.time | date: "%Y" }} {{ p.name }} &middot; Last updated: {{ site.time | date: "%B %Y" }}</footer>
+    </main>
+  </div>
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+</body>
 </html>

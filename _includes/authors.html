@@ -1,0 +1,6 @@
+{%- comment -%} Renders an author list, bolding the site owner. Usage: include authors.html list=pub.authors {%- endcomment -%}
+{%- for a in include.list -%}
+  {%- assign clean = a | remove: "*" | strip -%}
+  {%- if clean == site.data.profile.name -%}<span class="me">{{ a }}</span>{%- else -%}<span class="author">{{ a }}</span>{%- endif -%}
+  {%- unless forloop.last -%}, {% endunless -%}
+{%- endfor -%}

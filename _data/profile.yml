@@ -1,0 +1,34 @@
+# ---------------------------------------------------------------
+# Basic profile. Used by both the homepage (/) and the CV (/cv/).
+# ---------------------------------------------------------------
+name: "Junsung Park"
+photo: "/images/profile.jpg"
+position: "Ph.D. Candidate, KAIST AI"
+location: "Seoul, South Korea"
+
+links:
+  email: "jshackist.at.kaist.ac.kr"   # shown as plain text (no mailto link) to avoid spam bots
+  scholar: "https://scholar.google.com/citations?user=WjKLCQ4AAAAJ"
+  github: "https://github.com/engineerJPark"
+  linkedin: "https://www.linkedin.com/in/junsung-park-20a136158"
+
+# Paragraphs shown at the top of the homepage. Markdown is allowed.
+bio:
+  - >-
+    I am a Ph.D. candidate at [KAIST AI](https://gsai.kaist.ac.kr/), advised by
+    [Prof. Hyunjung Shim](https://scholar.google.com/citations?user=KB5XZGIAAAAJ&hl=en).
+    I received my B.S. in Mechanical Engineering & Artificial Intelligence from
+    [Korea University](https://www.korea.edu/sites/en/index.do).
+  - >-
+    I am a research intern at **Qualcomm AI Research**.
+  - >-
+    I am interested in real-world problems such as autonomous driving, navigation,
+    and robotics.
+
+# Filter buttons shown above the publication list.
+# Each publication's `tags` should use these names.
+pub_filters:
+  - Selected
+  - Autonomous Driving
+  - VLM
+  - LiDAR

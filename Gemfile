@@ -1,12 +1,5 @@
 source 'https://rubygems.org'
 
-group :jekyll_plugins do
-  gem 'jekyll'
-  gem 'jekyll-feed'
-  gem 'jekyll-sitemap'
-  gem 'jekyll-redirect-from'
-  gem 'jemoji'
-  gem 'webrick', '~> 1.8'
-end
-
-gem 'github-pages'
+# Same versions GitHub Pages uses, so `bundle exec jekyll serve` matches production.
+gem 'github-pages', group: :jekyll_plugins
+gem 'webrick', '~> 1.8'

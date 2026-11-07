@@ -1,0 +1,112 @@
+# ---------------------------------------------------------------
+# Publications. Newest first. Shown on the homepage AND in the CV.
+#
+#   title    : paper title
+#   authors  : list; add * for equal contribution. Your own name is bolded automatically.
+#   venue    : short name shown on the thumbnail and in the CV (e.g. "CVPR")
+#   venue_full: long name for the homepage (optional; falls back to `venue`)
+#   year     : year
+#   note     : highlight such as "Oral" (optional)
+#   type     : conference | journal | workshop | preprint | report
+#   tags     : names from pub_filters in profile.yml
+#   thumb    : image path, e.g. /images/paper/foo.png (optional; a placeholder is drawn if empty)
+#   links    : any of pdf, arxiv, code, project, poster, video (all optional)
+# ---------------------------------------------------------------
+
+- title: "Grounding Driving VLA via Inverse Kinematics"
+  authors: ["Junsung Park", "Hyunjung Shim"]
+  venue: "NeurIPS"
+  venue_full: "Conference on Neural Information Processing Systems (NeurIPS)"
+  year: 2026
+  type: conference
+  tags: [Selected, Autonomous Driving, VLM]
+  thumb:
+  links:
+    pdf: "https://arxiv.org/pdf/2605.21061"
+
+- title: "WaymoQA: A Multi-View Visual Question Answering Dataset for Safety-Critical Reasoning in Autonomous Driving"
+  authors: ["Seungjun Yu", "Seonho Lee", "Namho Kim", "Jaeyo Shin", "Junsung Park", "Wonjeong Ryu", "Raehyuk Jung", "Hyunjung Shim"]
+  venue: "EMNLP Findings"
+  venue_full: "Findings of the Association for Computational Linguistics: EMNLP"
+  year: 2026
+  type: conference
+  tags: [Autonomous Driving, VLM]
+  thumb:
+  links:
+    pdf: "https://arxiv.org/pdf/2511.20022"
+
+- title: "SUPER-AD: Semantic Uncertainty-aware Planning for End-to-End Robust Autonomous Driving"
+  authors: ["Wonjeong Ryu", "Seungjun Yu", "Seokha Moon", "Hojun Choi", "Junsung Park", "Jinkyu Kim", "Hyunjung Shim"]
+  venue: "Preprint"
+  year: 2025
+  type: preprint
+  tags: [Autonomous Driving]
+  thumb:
+  links:
+    pdf: "https://arxiv.org/pdf/2511.22865"
+
+- title: "Scene, Class, Signal: Tri-Level Adaptation for Synthetic-to-Real LiDAR Segmentation"
+  authors: ["Junsung Park", "Hyunjung Shim"]
+  venue: "Preprint"
+  year: 2025
+  type: preprint
+  tags: [LiDAR]
+  thumb:
+  links:
+    pdf: "https://openreview.net/pdf?id=8xjCp4OA6k"
+
+- title: "Robust Driving QA through Metadata-Grounded Context and Task-Specific Prompts"
+  authors: ["Seungjun Yu*", "Junsung Park*", "Youngsun Lim", "Hyunjung Shim"]
+  venue: "IROS RoboSense Challenge"
+  venue_full: "IROS 2025 RoboSense Challenge, Technical Report"
+  year: 2025
+  type: report
+  tags: [Autonomous Driving, VLM]
+  thumb:
+  links:
+    pdf: "https://arxiv.org/pdf/2510.19001"
+
+- title: "3D-Aware Vision-Language Models Fine-Tuning with Geometric Distillation"
+  authors: ["Seonho Lee*", "Jiho Choi*", "Inha Kang", "Jiwook Kim", "Junsung Park", "Hyunjung Shim"]
+  venue: "EMNLP Findings"
+  venue_full: "Findings of the Association for Computational Linguistics: EMNLP"
+  year: 2025
+  type: conference
+  tags: [VLM]
+  thumb:
+  links:
+    pdf: "https://aclanthology.org/2025.findings-emnlp.562.pdf"
+
+- title: "No Thing, Nothing: Highlighting Safety-Critical Classes for Robust LiDAR Semantic Segmentation in Adverse Weather"
+  authors: ["Junsung Park", "Hwijeong Lee", "Inha Kang", "Hyunjung Shim"]
+  venue: "CVPR"
+  venue_full: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+  year: 2025
+  type: conference
+  tags: [Selected, LiDAR]
+  thumb:
+  links:
+    pdf: "https://arxiv.org/pdf/2503.15910"
+
+- title: "Rethinking Data Augmentation for Robust LiDAR Semantic Segmentation in Adverse Weather"
+  authors: ["Junsung Park", "Kyungmin Kim", "Hyunjung Shim"]
+  venue: "ECCV"
+  venue_full: "European Conference on Computer Vision (ECCV)"
+  year: 2024
+  note: "Oral"
+  type: conference
+  tags: [Selected, LiDAR]
+  thumb:
+  links:
+    pdf: "https://arxiv.org/pdf/2407.02286"
+
+- title: "Precision Matters: Precision-aware Ensemble for Weakly Supervised Semantic Segmentation"
+  authors: ["Junsung Park", "Hyunjung Shim"]
+  venue: "AAAI Workshop"
+  venue_full: "AAAI Workshop"
+  year: 2024
+  type: workshop
+  tags: []
+  thumb:
+  links:
+    pdf: "https://arxiv.org/pdf/2406.19638"

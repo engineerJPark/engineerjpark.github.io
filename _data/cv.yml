@@ -1,0 +1,56 @@
+# ---------------------------------------------------------------
+# Everything else that appears on the homepage and/or the CV.
+# Publications are in publications.yml, news in news.yml.
+# ---------------------------------------------------------------
+
+education:
+  - school: "KAIST"
+    degree: "Ph.D. Candidate in Artificial Intelligence"
+    detail: "Advisor: Prof. Hyunjung Shim"
+    period: "Aug 2023 – Present"
+  - school: "Korea University"
+    degree: "B.S. in Mechanical Engineering & Artificial Intelligence"
+    period: "Mar 2017 – Aug 2023"
+
+experience:
+  - org: "Qualcomm AI Research, Qualcomm Korea YH"
+    role: "Research Intern"
+    period: "May 2026 – Nov 2026"
+
+patents:
+  - title: "Barbell with Built-in Weight Fixing Device"
+    detail: "Korea Patent, Reg. No. 1026314710000 (App. No. 10-2021-0092158)"
+    year: 2024
+
+projects:
+  - title: "IROS 2025 RoboSense Challenge, Track 1: Driving with Language"
+    detail: "Developed a prompting method that helps VLMs understand driving scenes. Placed 4th."
+    year: 2025
+  - title: "Open Manipulator Grasping Task: Vision for Robot Arm Control"
+    detail: "Undergraduate project. Vision modules for robot-arm grasping; 3D grasp position from FCN segmentation and a pinhole camera model."
+    year: 2022
+    link: "https://github.com/engineerJPark/Segmentation-to-World-Coordinate-by-FCN-and-Camera-Calibration"
+  - title: "Mobile Robot Project: ROS Programming & Motor Control"
+    detail: "Undergraduate project. ROS1 programming and embedded motor control on an OpenCM board."
+    year: 2021
+    link: "https://github.com/kasimov-ku/2021-project-emb-motorcontrol"
+  - title: "Capstone Design: Stair Treads Wheels"
+    detail: "Undergraduate project. Designed stair-climbing wheels and their rotation control. Bronze Prize."
+    year: 2018
+
+awards:
+  - title: "Top Reviewer, NeurIPS 2026 (Main Track)"
+    year: "2026"
+  - title: "Scholarship, Lee Myungbak & Kim Yoonok Foundation"
+    year: "2022 – 2023"
+  - title: "Scholarship, Korea University Alumni Association"
+    year: "2021 – 2023"
+  - title: "Bronze Prize & Social Contribution Prize, Capstone Design, Korea Univ. Innovation Center for Engineering"
+    year: "2018"
+
+service:
+  - group: "Conference Reviewer"
+    items:
+      - "Conference on Neural Information Processing Systems (NeurIPS) 2026"
+      - "International Conference on Learning Representations (ICLR) 2026"
+      - "AAAI Conference on Artificial Intelligence (AAAI) 2025"

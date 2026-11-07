@@ -1,0 +1,109 @@
+---
+layout: null
+permalink: /cv/
+title: CV
+---
+{%- assign p = site.data.profile -%}
+{%- assign cv = site.data.cv -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ p.name }} | CV</title>
+  <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+  <div class="toolbar no-print">
+    <a href="{{ '/' | relative_url }}">&larr; Homepage</a>
+    <button onclick="window.print()">Save as PDF</button>
+  </div>
+
+  <div class="page">
+    <header>
+      <h1>{{ p.name }}</h1>
+      <div class="contact">
+        {{ p.position }} &middot; {{ p.location }}<br>
+        {{ p.links.email }}
+        &middot; <a href="{{ site.url }}">{{ site.url | remove: "https://" }}</a>
+        {% if p.links.scholar %}&middot; <a href="{{ p.links.scholar }}">Google Scholar</a>{% endif %}
+        {% if p.links.github %}&middot; <a href="{{ p.links.github }}">GitHub</a>{% endif %}
+        {% if p.links.linkedin %}&middot; <a href="{{ p.links.linkedin }}">LinkedIn</a>{% endif %}
+      </div>
+    </header>
+
+    <section>
+      <h2>Education</h2>
+      {% for e in cv.education %}
+      <div class="row"><div class="what"><b>{{ e.school }}</b>, {{ e.degree }}{% if e.detail %}<div class="sub">{{ e.detail }}</div>{% endif %}</div><div class="when">{{ e.period }}</div></div>
+      {% endfor %}
+    </section>
+
+    {% if cv.experience.size > 0 %}
+    <section>
+      <h2>Experience</h2>
+      {% for e in cv.experience %}
+      <div class="row"><div class="what"><b>{{ e.org }}</b>, {{ e.role }}{% if e.detail %}<div class="sub">{{ e.detail }}</div>{% endif %}</div><div class="when">{{ e.period }}</div></div>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    <section>
+      <h2>Publications</h2>
+      <p class="legend">* equal contribution</p>
+      <ol class="pubs">
+      {% for pub in site.data.publications %}
+        <li>
+          <div class="row">
+            <div class="what">
+              <span class="ptitle">{{ pub.title }}.</span>
+              {% if pub.links.pdf %}<a href="{{ pub.links.pdf }}">[PDF]</a>{% endif %}
+              {% if pub.links.code %}<a href="{{ pub.links.code }}">[Code]</a>{% endif %}
+              {% if pub.links.project %}<a href="{{ pub.links.project }}">[Project]</a>{% endif %}
+              <div class="sub">{% include authors.html list=pub.authors %}</div>
+            </div>
+            <div class="when">{{ pub.venue }}{% if pub.note %}, <b>{{ pub.note }}</b>{% endif %}, {{ pub.year }}</div>
+          </div>
+        </li>
+      {% endfor %}
+      </ol>
+    </section>
+
+    {% if cv.patents.size > 0 %}
+    <section>
+      <h2>Patents</h2>
+      {% for x in cv.patents %}
+      <div class="row"><div class="what"><b>{{ x.title }}</b><div class="sub">{{ x.detail }}</div></div><div class="when">{{ x.year }}</div></div>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    <section>
+      <h2>Projects</h2>
+      {% for x in cv.projects %}
+      <div class="row"><div class="what"><b>{{ x.title }}</b>{% if x.link %} <a href="{{ x.link }}">[GitHub]</a>{% endif %}<div class="sub">{{ x.detail }}</div></div><div class="when">{{ x.year }}</div></div>
+      {% endfor %}
+    </section>
+
+    <section>
+      <h2>Awards and Honors</h2>
+      {% for x in cv.awards %}
+      <div class="row"><div class="what">{{ x.title }}</div><div class="when">{{ x.year }}</div></div>
+      {% endfor %}
+    </section>
+
+    <section>
+      <h2>Academic Services</h2>
+      {% for g in cv.service %}
+      <div class="row"><div class="what"><b>{{ g.group }}:</b> {{ g.items | join: "; " }}</div></div>
+      {% endfor %}
+    </section>
+
+    <footer>Last updated: {{ site.time | date: "%B %Y" }}</footer>
+  </div>
+</body>
+</html>
