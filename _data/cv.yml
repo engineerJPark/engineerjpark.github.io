@@ -44,8 +44,11 @@ section_titles:
 # One item renders as a paragraph; several render as separate lines.
 research_interest:
   - >-
-    End-to-end autonomous driving, vision-language-action (VLA) models for planning,
-    and robust 3D perception for safety-critical scenarios.
+    My research focuses on Physical AI and LLMs. I have been working on autonomous
+    driving, vision-language models (VLMs), and LiDAR perception, and I am interested
+    in building AI systems that can understand and interact with the physical world.
+    Recently, I am interested in unifying various tasks and embodiments on a single
+    VLA/WAM model.
 
 education:
   - school: "Korea Advanced Institute of Science and Technology (KAIST)"

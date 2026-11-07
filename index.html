@@ -99,7 +99,7 @@ layout: default
   <h2>Projects</h2>
   <ul class="plain">
     {% for x in cv.projects %}{% unless x.site == false %}
-    <li><span class="when">{{ x.year }}</span><div><b>{% if x.link %}<a href="{{ x.link }}" target="_blank" rel="noopener">{{ x.title }}</a>{% else %}{{ x.title }}{% endif %}</b><br><span class="sub">{{ x.detail }}</span></div></li>
+    <li><span class="when">{{ x.year }}</span><div><b>{{ x.title }}</b>{% if x.link %} <a class="code-link" href="{{ x.link }}" target="_blank" rel="noopener">[Code]</a>{% endif %}<br><span class="sub">{{ x.detail }}</span></div></li>
     {% endunless %}{% endfor %}
   </ul>
 </section>

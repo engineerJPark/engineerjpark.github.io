@@ -127,13 +127,14 @@ h3 { font-size: 15px; font-weight: 500; color: var(--accent); margin: 16px 0 6px
 .pub-thumb { width: 28%; flex-shrink: 0; }
 .pub-thumb img, .thumb-placeholder {
   width: 100%;
-  aspect-ratio: 4 / 3;
   border-radius: 10px;
   display: block;
-  object-fit: cover;
   transition: transform .4s ease;
 }
-.pub-thumb { overflow: hidden; border-radius: 10px; align-self: flex-start; }
+/* Paper figures keep their own aspect ratio so nothing is cropped. */
+.pub-thumb img { height: auto; background: #fff; border: 1px solid var(--line); }
+.thumb-placeholder { aspect-ratio: 2 / 1; }
+.pub-thumb { overflow: hidden; border-radius: 10px; align-self: flex-start; margin-top: 3px; }
 .pub:hover .pub-thumb img { transform: scale(1.05); }
 .thumb-placeholder {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -169,6 +170,7 @@ ul.plain li {
 }
 ul.plain .when { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; grid-row: span 3; }
 ul.plain .sub { font-size: 14px; }
+ul.plain .code-link { font-size: 14px; margin-left: 2px; }
 #service ul { margin: 0; padding-left: 18px; }
 
 footer {
