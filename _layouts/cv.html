@@ -2,6 +2,7 @@
   Printable CV layout (Awesome-CV style). Content comes from _data/cv.yml and
   _data/publications.yml. A page may set `variant: <name>` to apply overrides
   from _data/variants/<name>.yml (section order, titles, research interest, ...).
+  On deploy, .github/workflows/deploy.yml prints this page to PDF and redirects to it.
 {%- endcomment -%}
 {%- assign p = site.data.profile -%}
 {%- assign cv = site.data.cv -%}
@@ -22,7 +23,7 @@
   {%- if page.noindex %}
   <meta name="robots" content="noindex, nofollow">
   {%- endif %}
-  {%- comment -%} The title becomes the default file name when saving as PDF. {%- endcomment %}
+  {%- comment -%} Becomes the title of the generated PDF. {%- endcomment %}
   <title>{{ p.name | replace: " ", "_" }}_CV</title>
   <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,11 +32,6 @@
   <link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body>
-  <div class="toolbar no-print">
-    <a href="{{ '/' | relative_url }}">&larr; Homepage</a>
-    <button onclick="window.print()">Save as PDF</button>
-  </div>
-
   <div class="page">
     <header class="cv-header">
       <h1>{{ p.name | remove: last_name | strip }} <span class="accent">{{ last_name }}</span></h1>

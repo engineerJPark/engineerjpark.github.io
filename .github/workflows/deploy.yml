@@ -1,0 +1,65 @@
+# Builds the Jekyll site, prints every CV page to PDF, and deploys the result.
+# Requires Settings -> Pages -> Source = "GitHub Actions".
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/jekyll-build-pages@v1
+
+      # /cv/ and every /cv/<variant>/ become a PDF plus a redirect to it.
+      - name: Print CV pages to PDF
+        run: |
+          sudo chown -R "$(id -u):$(id -g)" _site  # the Jekyll step writes as root
+          python3 -m http.server 4000 --bind 127.0.0.1 --directory _site &
+          curl -sf --retry 10 --retry-connrefused --retry-delay 1 -o /dev/null http://127.0.0.1:4000/
+
+          for index in _site/cv/index.html _site/cv/*/index.html; do
+            dir=$(dirname "$index")
+            pdf="$dir/Junsung_Park_CV.pdf"
+            google-chrome --headless --no-sandbox --no-pdf-header-footer \
+              --virtual-time-budget=20000 --print-to-pdf="$PWD/$pdf" \
+              "http://127.0.0.1:4000/${dir#_site/}/"
+
+            # Fallback fonts would silently change the layout: fail and keep the last deploy.
+            grep -aq SourceSans3 "$pdf"
+            grep -aq Roboto "$pdf"
+
+            cat > "$index" <<'HTML'
+          <!doctype html>
+          <meta charset="utf-8">
+          <meta name="robots" content="noindex">
+          <meta http-equiv="refresh" content="0; url=Junsung_Park_CV.pdf">
+          <title>CV</title>
+          <a href="Junsung_Park_CV.pdf">Open the CV (PDF)</a>
+          HTML
+          done
+
+      - uses: actions/upload-pages-artifact@v5
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
