@@ -133,10 +133,10 @@ projects:
 lab_service:
   - role: "Student Lab Leader"
     org: "Prof. Hyunjung Shim's Lab, KAIST"
-    period: "Jul 2024 – May 2025"
+    period: "Jul 2025 – May 2026"
   - role: "Research Server Administrator (sole administrator)"
     org: "Prof. Hyunjung Shim's Lab, KAIST"
-    period: "Aug 2023 – May 2025"
+    period: "Aug 2023 – May 2026"
 
 awards:
   - title: "Lee Myungbak & Kim Yoonok Foundation"
